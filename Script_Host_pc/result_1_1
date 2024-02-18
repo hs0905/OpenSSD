@@ -1,0 +1,8 @@
+reg: 1
+0
+bit : 20 couter : 1007970
+NVMe command result:00000000
+read: Success
+1
+bit : 31 couter : 1172920
+NVMe command result:00000000

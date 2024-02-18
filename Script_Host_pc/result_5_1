@@ -1,0 +1,4097 @@
+reg: 5
+0
+bit : 12 couter : 998170
+NVMe command result:00000000
+read: Success
+1
+bit : 16 couter : 1114060
+NVMe command result:00000000
+read: Success
+2
+bit : 5 couter : 961460
+NVMe command result:00000000
+read: Success
+3
+bit : 23 couter : 939700
+NVMe command result:00000000
+read: Success
+4
+bit : 30 couter : 1135810
+NVMe command result:00000000
+read: Success
+5
+bit : 14 couter : 911110
+NVMe command result:00000000
+read: Success
+6
+bit : 13 couter : 1002120
+NVMe command result:00000000
+read: Success
+7
+bit : 6 couter : 1109510
+NVMe command result:00000000
+read: Success
+8
+bit : 15 couter : 862800
+NVMe command result:00000000
+read: Success
+9
+bit : 28 couter : 1020030
+NVMe command result:00000000
+read: Success
+10
+bit : 4 couter : 922590
+NVMe command result:00000000
+read: Success
+11
+bit : 27 couter : 1049730
+NVMe command result:00000000
+read: Success
+12
+bit : 6 couter : 906780
+NVMe command result:00000000
+read: Success
+13
+bit : 27 couter : 939890
+NVMe command result:00000000
+read: Success
+14
+bit : 13 couter : 1124070
+NVMe command result:00000000
+read: Success
+15
+bit : 20 couter : 948490
+NVMe command result:00000000
+read: Success
+16
+bit : 1 couter : 898040
+NVMe command result:00000000
+read: Success
+17
+bit : 29 couter : 915380
+NVMe command result:00000000
+read: Success
+18
+bit : 16 couter : 1071750
+NVMe command result:00000000
+read: Success
+19
+bit : 26 couter : 1095720
+NVMe command result:00000000
+read: Success
+20
+bit : 7 couter : 1118040
+NVMe command result:00000000
+read: Success
+21
+bit : 28 couter : 935200
+NVMe command result:00000000
+read: Success
+22
+bit : 15 couter : 1168090
+NVMe command result:00000000
+read: Success
+23
+bit : 24 couter : 1035140
+NVMe command result:00000000
+read: Success
+24
+bit : 22 couter : 922200
+NVMe command result:00000000
+read: Success
+25
+bit : 7 couter : 1052280
+NVMe command result:00000000
+read: Success
+26
+bit : 16 couter : 1105750
+NVMe command result:00000000
+read: Success
+27
+bit : 19 couter : 1086810
+NVMe command result:00000000
+read: Success
+28
+bit : 26 couter : 1081360
+NVMe command result:00000000
+read: Success
+29
+bit : 11 couter : 1024340
+NVMe command result:00000000
+read: Success
+30
+bit : 29 couter : 890150
+NVMe command result:00000000
+read: Success
+31
+bit : 23 couter : 1171510
+NVMe command result:00000000
+read: Success
+32
+bit : 0 couter : 1001200
+NVMe command result:00000000
+read: Success
+33
+bit : 27 couter : 1078940
+NVMe command result:00000000
+read: Success
+34
+bit : 10 couter : 869160
+NVMe command result:00000000
+read: Success
+35
+bit : 1 couter : 983530
+NVMe command result:00000000
+read: Success
+36
+bit : 9 couter : 1071320
+NVMe command result:00000000
+read: Success
+37
+bit : 15 couter : 1104960
+NVMe command result:00000000
+read: Success
+38
+bit : 15 couter : 1167190
+NVMe command result:00000000
+read: Success
+39
+bit : 24 couter : 1075190
+NVMe command result:00000000
+read: Success
+40
+bit : 22 couter : 943030
+NVMe command result:00000000
+read: Success
+41
+bit : 24 couter : 1056560
+NVMe command result:00000000
+read: Success
+42
+bit : 18 couter : 1104780
+NVMe command result:00000000
+read: Success
+43
+bit : 23 couter : 944350
+NVMe command result:00000000
+read: Success
+44
+bit : 2 couter : 865900
+NVMe command result:00000000
+read: Success
+45
+bit : 2 couter : 1073030
+NVMe command result:00000000
+read: Success
+46
+bit : 19 couter : 1165460
+NVMe command result:00000000
+read: Success
+47
+bit : 5 couter : 889070
+NVMe command result:00000000
+read: Success
+48
+bit : 8 couter : 1173850
+NVMe command result:00000000
+read: Success
+49
+bit : 25 couter : 1110390
+NVMe command result:00000000
+read: Success
+50
+bit : 22 couter : 870640
+NVMe command result:00000000
+read: Success
+51
+bit : 13 couter : 1055630
+NVMe command result:00000000
+read: Success
+52
+bit : 9 couter : 997270
+NVMe command result:00000000
+read: Success
+53
+bit : 0 couter : 1043410
+NVMe command result:00000000
+read: Success
+54
+bit : 12 couter : 1111390
+NVMe command result:00000000
+read: Success
+55
+bit : 25 couter : 875050
+NVMe command result:00000000
+read: Success
+56
+bit : 13 couter : 871840
+NVMe command result:00000000
+read: Success
+57
+bit : 21 couter : 988390
+NVMe command result:00000000
+read: Success
+58
+bit : 29 couter : 1054770
+NVMe command result:00000000
+read: Success
+59
+bit : 4 couter : 1123760
+NVMe command result:00000000
+read: Success
+60
+bit : 29 couter : 1100750
+NVMe command result:00000000
+read: Success
+61
+bit : 2 couter : 881930
+NVMe command result:00000000
+read: Success
+62
+bit : 13 couter : 884700
+NVMe command result:00000000
+read: Success
+63
+bit : 17 couter : 1045400
+NVMe command result:00000000
+read: Success
+64
+bit : 15 couter : 1142910
+NVMe command result:00000000
+read: Success
+65
+bit : 18 couter : 1091910
+NVMe command result:00000000
+read: Success
+66
+bit : 5 couter : 908300
+NVMe command result:00000000
+read: Success
+67
+bit : 11 couter : 863010
+NVMe command result:00000000
+read: Success
+68
+bit : 14 couter : 1008770
+NVMe command result:00000000
+read: Success
+69
+bit : 8 couter : 970200
+NVMe command result:00000000
+read: Success
+70
+bit : 11 couter : 1093150
+NVMe command result:00000000
+read: Success
+71
+bit : 15 couter : 1171340
+NVMe command result:00000000
+read: Success
+72
+bit : 31 couter : 860780
+NVMe command result:00000000
+read: Success
+73
+bit : 30 couter : 945820
+NVMe command result:00000000
+read: Success
+74
+bit : 19 couter : 1028160
+NVMe command result:00000000
+read: Success
+75
+bit : 0 couter : 935440
+NVMe command result:00000000
+read: Success
+76
+bit : 22 couter : 870190
+NVMe command result:00000000
+read: Success
+77
+bit : 15 couter : 1168590
+NVMe command result:00000000
+read: Success
+78
+bit : 30 couter : 971550
+NVMe command result:00000000
+read: Success
+79
+bit : 28 couter : 1116020
+NVMe command result:00000000
+read: Success
+80
+bit : 9 couter : 1047850
+NVMe command result:00000000
+read: Success
+81
+bit : 22 couter : 891140
+NVMe command result:00000000
+read: Success
+82
+bit : 31 couter : 1058150
+NVMe command result:00000000
+read: Success
+83
+bit : 5 couter : 1141090
+NVMe command result:00000000
+read: Success
+84
+bit : 25 couter : 968620
+NVMe command result:00000000
+read: Success
+85
+bit : 17 couter : 1052130
+NVMe command result:00000000
+read: Success
+86
+bit : 31 couter : 1177410
+NVMe command result:00000000
+read: Success
+87
+bit : 11 couter : 1160550
+NVMe command result:00000000
+read: Success
+88
+bit : 28 couter : 1173050
+NVMe command result:00000000
+read: Success
+89
+bit : 15 couter : 1154000
+NVMe command result:00000000
+read: Success
+90
+bit : 1 couter : 1033300
+NVMe command result:00000000
+read: Success
+91
+bit : 10 couter : 1114170
+NVMe command result:00000000
+read: Success
+92
+bit : 31 couter : 949900
+NVMe command result:00000000
+read: Success
+93
+bit : 20 couter : 925590
+NVMe command result:00000000
+read: Success
+94
+bit : 1 couter : 864370
+NVMe command result:00000000
+read: Success
+95
+bit : 22 couter : 1004540
+NVMe command result:00000000
+read: Success
+96
+bit : 10 couter : 1151690
+NVMe command result:00000000
+read: Success
+97
+bit : 23 couter : 1034760
+NVMe command result:00000000
+read: Success
+98
+bit : 19 couter : 1042310
+NVMe command result:00000000
+read: Success
+99
+bit : 28 couter : 1081830
+NVMe command result:00000000
+read: Success
+100
+bit : 6 couter : 1148290
+NVMe command result:00000000
+read: Success
+101
+bit : 21 couter : 860590
+NVMe command result:00000000
+read: Success
+102
+bit : 4 couter : 1175470
+NVMe command result:00000000
+read: Success
+103
+bit : 11 couter : 1118200
+NVMe command result:00000000
+read: Success
+104
+bit : 5 couter : 1112890
+NVMe command result:00000000
+read: Success
+105
+bit : 23 couter : 1127970
+NVMe command result:00000000
+read: Success
+106
+bit : 10 couter : 880360
+NVMe command result:00000000
+read: Success
+107
+bit : 5 couter : 944580
+NVMe command result:00000000
+read: Success
+108
+bit : 9 couter : 1107330
+NVMe command result:00000000
+read: Success
+109
+bit : 19 couter : 1004840
+NVMe command result:00000000
+read: Success
+110
+bit : 30 couter : 953170
+NVMe command result:00000000
+read: Success
+111
+bit : 29 couter : 1172980
+NVMe command result:00000000
+read: Success
+112
+bit : 2 couter : 1117200
+NVMe command result:00000000
+read: Success
+113
+bit : 5 couter : 886230
+NVMe command result:00000000
+read: Success
+114
+bit : 25 couter : 1099650
+NVMe command result:00000000
+read: Success
+115
+bit : 21 couter : 936310
+NVMe command result:00000000
+read: Success
+116
+bit : 22 couter : 1122660
+NVMe command result:00000000
+read: Success
+117
+bit : 20 couter : 938590
+NVMe command result:00000000
+read: Success
+118
+bit : 11 couter : 1101630
+NVMe command result:00000000
+read: Success
+119
+bit : 24 couter : 984610
+NVMe command result:00000000
+read: Success
+120
+bit : 11 couter : 947710
+NVMe command result:00000000
+read: Success
+121
+bit : 11 couter : 1107800
+NVMe command result:00000000
+read: Success
+122
+bit : 13 couter : 987500
+NVMe command result:00000000
+read: Success
+123
+bit : 14 couter : 1053090
+NVMe command result:00000000
+read: Success
+124
+bit : 17 couter : 1130580
+NVMe command result:00000000
+read: Success
+125
+bit : 14 couter : 1128400
+NVMe command result:00000000
+read: Success
+126
+bit : 22 couter : 949770
+NVMe command result:00000000
+read: Success
+127
+bit : 19 couter : 971040
+NVMe command result:00000000
+read: Success
+128
+bit : 15 couter : 968030
+NVMe command result:00000000
+read: Success
+129
+bit : 0 couter : 1101310
+NVMe command result:00000000
+read: Success
+130
+bit : 31 couter : 1040230
+NVMe command result:00000000
+read: Success
+131
+bit : 6 couter : 1017260
+NVMe command result:00000000
+read: Success
+132
+bit : 7 couter : 1172910
+NVMe command result:00000000
+read: Success
+133
+bit : 10 couter : 908240
+NVMe command result:00000000
+read: Success
+134
+bit : 4 couter : 1059080
+NVMe command result:00000000
+read: Success
+135
+bit : 18 couter : 1174660
+NVMe command result:00000000
+read: Success
+136
+bit : 10 couter : 888860
+NVMe command result:00000000
+read: Success
+137
+bit : 31 couter : 972630
+NVMe command result:00000000
+read: Success
+138
+bit : 8 couter : 1139990
+NVMe command result:00000000
+read: Success
+139
+bit : 13 couter : 1145270
+NVMe command result:00000000
+read: Success
+140
+bit : 11 couter : 945960
+NVMe command result:00000000
+read: Success
+141
+bit : 0 couter : 1130290
+NVMe command result:00000000
+read: Success
+142
+bit : 12 couter : 1013450
+NVMe command result:00000000
+read: Success
+143
+bit : 24 couter : 978990
+NVMe command result:00000000
+read: Success
+144
+bit : 3 couter : 862370
+NVMe command result:00000000
+read: Success
+145
+bit : 10 couter : 924350
+NVMe command result:00000000
+read: Success
+146
+bit : 1 couter : 1051690
+NVMe command result:00000000
+read: Success
+147
+bit : 27 couter : 900780
+NVMe command result:00000000
+read: Success
+148
+bit : 16 couter : 965000
+NVMe command result:00000000
+read: Success
+149
+bit : 9 couter : 1157110
+NVMe command result:00000000
+read: Success
+150
+bit : 28 couter : 1106950
+NVMe command result:00000000
+read: Success
+151
+bit : 29 couter : 1008740
+NVMe command result:00000000
+read: Success
+152
+bit : 20 couter : 1136260
+NVMe command result:00000000
+read: Success
+153
+bit : 11 couter : 1045360
+NVMe command result:00000000
+read: Success
+154
+bit : 11 couter : 1139490
+NVMe command result:00000000
+read: Success
+155
+bit : 11 couter : 1136300
+NVMe command result:00000000
+read: Success
+156
+bit : 21 couter : 954320
+NVMe command result:00000000
+read: Success
+157
+bit : 8 couter : 941550
+NVMe command result:00000000
+read: Success
+158
+bit : 28 couter : 895720
+NVMe command result:00000000
+read: Success
+159
+bit : 30 couter : 934050
+NVMe command result:00000000
+read: Success
+160
+bit : 9 couter : 1118830
+NVMe command result:00000000
+read: Success
+161
+bit : 16 couter : 1128920
+NVMe command result:00000000
+read: Success
+162
+bit : 3 couter : 929620
+NVMe command result:00000000
+read: Success
+163
+bit : 24 couter : 1006210
+NVMe command result:00000000
+read: Success
+164
+bit : 27 couter : 1011540
+NVMe command result:00000000
+read: Success
+165
+bit : 11 couter : 940630
+NVMe command result:00000000
+read: Success
+166
+bit : 7 couter : 1141010
+NVMe command result:00000000
+read: Success
+167
+bit : 5 couter : 1101400
+NVMe command result:00000000
+read: Success
+168
+bit : 31 couter : 1026820
+NVMe command result:00000000
+read: Success
+169
+bit : 1 couter : 905890
+NVMe command result:00000000
+read: Success
+170
+bit : 3 couter : 945880
+NVMe command result:00000000
+read: Success
+171
+bit : 4 couter : 1029290
+NVMe command result:00000000
+read: Success
+172
+bit : 8 couter : 998050
+NVMe command result:00000000
+read: Success
+173
+bit : 17 couter : 870500
+NVMe command result:00000000
+read: Success
+174
+bit : 17 couter : 1166060
+NVMe command result:00000000
+read: Success
+175
+bit : 11 couter : 1172090
+NVMe command result:00000000
+read: Success
+176
+bit : 8 couter : 875040
+NVMe command result:00000000
+read: Success
+177
+bit : 10 couter : 1115740
+NVMe command result:00000000
+read: Success
+178
+bit : 13 couter : 888190
+NVMe command result:00000000
+read: Success
+179
+bit : 31 couter : 1124940
+NVMe command result:00000000
+read: Success
+180
+bit : 17 couter : 1045490
+NVMe command result:00000000
+read: Success
+181
+bit : 4 couter : 887630
+NVMe command result:00000000
+read: Success
+182
+bit : 20 couter : 1101560
+NVMe command result:00000000
+read: Success
+183
+bit : 9 couter : 1119560
+NVMe command result:00000000
+read: Success
+184
+bit : 12 couter : 969930
+NVMe command result:00000000
+read: Success
+185
+bit : 27 couter : 948590
+NVMe command result:00000000
+read: Success
+186
+bit : 5 couter : 1016560
+NVMe command result:00000000
+read: Success
+187
+bit : 26 couter : 1131700
+NVMe command result:00000000
+read: Success
+188
+bit : 21 couter : 902060
+NVMe command result:00000000
+read: Success
+189
+bit : 24 couter : 1120370
+NVMe command result:00000000
+read: Success
+190
+bit : 0 couter : 856480
+NVMe command result:00000000
+read: Success
+191
+bit : 26 couter : 987200
+NVMe command result:00000000
+read: Success
+192
+bit : 26 couter : 1050450
+NVMe command result:00000000
+read: Success
+193
+bit : 29 couter : 902960
+NVMe command result:00000000
+read: Success
+194
+bit : 23 couter : 1142500
+NVMe command result:00000000
+read: Success
+195
+bit : 1 couter : 1122720
+NVMe command result:00000000
+read: Success
+196
+bit : 4 couter : 856800
+NVMe command result:00000000
+read: Success
+197
+bit : 12 couter : 875710
+NVMe command result:00000000
+read: Success
+198
+bit : 19 couter : 945940
+NVMe command result:00000000
+read: Success
+199
+bit : 30 couter : 931550
+NVMe command result:00000000
+read: Success
+200
+bit : 0 couter : 1162890
+NVMe command result:00000000
+read: Success
+201
+bit : 9 couter : 1168290
+NVMe command result:00000000
+read: Success
+202
+bit : 15 couter : 1013320
+NVMe command result:00000000
+read: Success
+203
+bit : 17 couter : 921760
+NVMe command result:00000000
+read: Success
+204
+bit : 2 couter : 1039150
+NVMe command result:00000000
+read: Success
+205
+bit : 10 couter : 940480
+NVMe command result:00000000
+read: Success
+206
+bit : 9 couter : 934930
+NVMe command result:00000000
+read: Success
+207
+bit : 7 couter : 1161860
+NVMe command result:00000000
+read: Success
+208
+bit : 18 couter : 986160
+NVMe command result:00000000
+read: Success
+209
+bit : 28 couter : 912860
+NVMe command result:00000000
+read: Success
+210
+bit : 17 couter : 1052700
+NVMe command result:00000000
+read: Success
+211
+bit : 15 couter : 1149010
+NVMe command result:00000000
+read: Success
+212
+bit : 2 couter : 1049980
+NVMe command result:00000000
+read: Success
+213
+bit : 6 couter : 1162290
+NVMe command result:00000000
+read: Success
+214
+bit : 9 couter : 1116820
+NVMe command result:00000000
+read: Success
+215
+bit : 11 couter : 981710
+NVMe command result:00000000
+read: Success
+216
+bit : 7 couter : 1013520
+NVMe command result:00000000
+read: Success
+217
+bit : 8 couter : 1092670
+NVMe command result:00000000
+read: Success
+218
+bit : 26 couter : 1138220
+NVMe command result:00000000
+read: Success
+219
+bit : 27 couter : 1040480
+NVMe command result:00000000
+read: Success
+220
+bit : 13 couter : 981320
+NVMe command result:00000000
+read: Success
+221
+bit : 28 couter : 940640
+NVMe command result:00000000
+read: Success
+222
+bit : 1 couter : 1031730
+NVMe command result:00000000
+read: Success
+223
+bit : 26 couter : 1063770
+NVMe command result:00000000
+read: Success
+224
+bit : 13 couter : 1111480
+NVMe command result:00000000
+read: Success
+225
+bit : 26 couter : 998300
+NVMe command result:00000000
+read: Success
+226
+bit : 17 couter : 950860
+NVMe command result:00000000
+read: Success
+227
+bit : 19 couter : 955250
+NVMe command result:00000000
+read: Success
+228
+bit : 11 couter : 936910
+NVMe command result:00000000
+read: Success
+229
+bit : 13 couter : 866940
+NVMe command result:00000000
+read: Success
+230
+bit : 30 couter : 1142120
+NVMe command result:00000000
+read: Success
+231
+bit : 21 couter : 1068940
+NVMe command result:00000000
+read: Success
+232
+bit : 1 couter : 1018070
+NVMe command result:00000000
+read: Success
+233
+bit : 20 couter : 1052860
+NVMe command result:00000000
+read: Success
+234
+bit : 8 couter : 860210
+NVMe command result:00000000
+read: Success
+235
+bit : 2 couter : 1126250
+NVMe command result:00000000
+read: Success
+236
+bit : 27 couter : 1094190
+NVMe command result:00000000
+read: Success
+237
+bit : 10 couter : 897250
+NVMe command result:00000000
+read: Success
+238
+bit : 20 couter : 1016560
+NVMe command result:00000000
+read: Success
+239
+bit : 5 couter : 1103340
+NVMe command result:00000000
+read: Success
+240
+bit : 29 couter : 985480
+NVMe command result:00000000
+read: Success
+241
+bit : 23 couter : 1072220
+NVMe command result:00000000
+read: Success
+242
+bit : 21 couter : 1044700
+NVMe command result:00000000
+read: Success
+243
+bit : 20 couter : 884680
+NVMe command result:00000000
+read: Success
+244
+bit : 2 couter : 921920
+NVMe command result:00000000
+read: Success
+245
+bit : 29 couter : 1128610
+NVMe command result:00000000
+read: Success
+246
+bit : 0 couter : 1095610
+NVMe command result:00000000
+read: Success
+247
+bit : 30 couter : 1128560
+NVMe command result:00000000
+read: Success
+248
+bit : 24 couter : 1024860
+NVMe command result:00000000
+read: Success
+249
+bit : 15 couter : 994010
+NVMe command result:00000000
+read: Success
+250
+bit : 3 couter : 1082070
+NVMe command result:00000000
+read: Success
+251
+bit : 18 couter : 915470
+NVMe command result:00000000
+read: Success
+252
+bit : 31 couter : 933370
+NVMe command result:00000000
+read: Success
+253
+bit : 21 couter : 987680
+NVMe command result:00000000
+read: Success
+254
+bit : 21 couter : 1083880
+NVMe command result:00000000
+read: Success
+255
+bit : 24 couter : 929250
+NVMe command result:00000000
+read: Success
+256
+bit : 24 couter : 1148760
+NVMe command result:00000000
+read: Success
+257
+bit : 21 couter : 963070
+NVMe command result:00000000
+read: Success
+258
+bit : 8 couter : 1037100
+NVMe command result:00000000
+read: Success
+259
+bit : 11 couter : 1043670
+NVMe command result:00000000
+read: Success
+260
+bit : 28 couter : 864160
+NVMe command result:00000000
+read: Success
+261
+bit : 21 couter : 856080
+NVMe command result:00000000
+read: Success
+262
+bit : 14 couter : 1134610
+NVMe command result:00000000
+read: Success
+263
+bit : 2 couter : 1093020
+NVMe command result:00000000
+read: Success
+264
+bit : 4 couter : 1089570
+NVMe command result:00000000
+read: Success
+265
+bit : 2 couter : 1060090
+NVMe command result:00000000
+read: Success
+266
+bit : 14 couter : 1085720
+NVMe command result:00000000
+read: Success
+267
+bit : 8 couter : 986980
+NVMe command result:00000000
+read: Success
+268
+bit : 12 couter : 1159380
+NVMe command result:00000000
+read: Success
+269
+bit : 17 couter : 1142640
+NVMe command result:00000000
+read: Success
+270
+bit : 11 couter : 1140790
+NVMe command result:00000000
+read: Success
+271
+bit : 16 couter : 1171650
+NVMe command result:00000000
+read: Success
+272
+bit : 19 couter : 898990
+NVMe command result:00000000
+read: Success
+273
+bit : 27 couter : 899100
+NVMe command result:00000000
+read: Success
+274
+bit : 4 couter : 923780
+NVMe command result:00000000
+read: Success
+275
+bit : 24 couter : 1123500
+NVMe command result:00000000
+read: Success
+276
+bit : 1 couter : 1156430
+NVMe command result:00000000
+read: Success
+277
+bit : 9 couter : 1003190
+NVMe command result:00000000
+read: Success
+278
+bit : 20 couter : 865980
+NVMe command result:00000000
+read: Success
+279
+bit : 28 couter : 978550
+NVMe command result:00000000
+read: Success
+280
+bit : 26 couter : 1063600
+NVMe command result:00000000
+read: Success
+281
+bit : 6 couter : 1118510
+NVMe command result:00000000
+read: Success
+282
+bit : 12 couter : 910770
+NVMe command result:00000000
+read: Success
+283
+bit : 10 couter : 1097970
+NVMe command result:00000000
+read: Success
+284
+bit : 13 couter : 1135070
+NVMe command result:00000000
+read: Success
+285
+bit : 28 couter : 1019380
+NVMe command result:00000000
+read: Success
+286
+bit : 16 couter : 905320
+NVMe command result:00000000
+read: Success
+287
+bit : 24 couter : 1086730
+NVMe command result:00000000
+read: Success
+288
+bit : 21 couter : 870260
+NVMe command result:00000000
+read: Success
+289
+bit : 21 couter : 1076260
+NVMe command result:00000000
+read: Success
+290
+bit : 29 couter : 1095210
+NVMe command result:00000000
+read: Success
+291
+bit : 7 couter : 1120390
+NVMe command result:00000000
+read: Success
+292
+bit : 0 couter : 1026650
+NVMe command result:00000000
+read: Success
+293
+bit : 21 couter : 979200
+NVMe command result:00000000
+read: Success
+294
+bit : 24 couter : 1103090
+NVMe command result:00000000
+read: Success
+295
+bit : 3 couter : 1038350
+NVMe command result:00000000
+read: Success
+296
+bit : 26 couter : 900490
+NVMe command result:00000000
+read: Success
+297
+bit : 31 couter : 1079970
+NVMe command result:00000000
+read: Success
+298
+bit : 28 couter : 1060030
+NVMe command result:00000000
+read: Success
+299
+bit : 3 couter : 861500
+NVMe command result:00000000
+read: Success
+300
+bit : 8 couter : 914510
+NVMe command result:00000000
+read: Success
+301
+bit : 8 couter : 972040
+NVMe command result:00000000
+read: Success
+302
+bit : 25 couter : 864250
+NVMe command result:00000000
+read: Success
+303
+bit : 23 couter : 959620
+NVMe command result:00000000
+read: Success
+304
+bit : 16 couter : 1117670
+NVMe command result:00000000
+read: Success
+305
+bit : 19 couter : 1170850
+NVMe command result:00000000
+read: Success
+306
+bit : 23 couter : 1083720
+NVMe command result:00000000
+read: Success
+307
+bit : 3 couter : 1075830
+NVMe command result:00000000
+read: Success
+308
+bit : 11 couter : 988370
+NVMe command result:00000000
+read: Success
+309
+bit : 1 couter : 1063530
+NVMe command result:00000000
+read: Success
+310
+bit : 23 couter : 1141140
+NVMe command result:00000000
+read: Success
+311
+bit : 6 couter : 861910
+NVMe command result:00000000
+read: Success
+312
+bit : 6 couter : 1130960
+NVMe command result:00000000
+read: Success
+313
+bit : 10 couter : 1096770
+NVMe command result:00000000
+read: Success
+314
+bit : 24 couter : 994210
+NVMe command result:00000000
+read: Success
+315
+bit : 7 couter : 1176020
+NVMe command result:00000000
+read: Success
+316
+bit : 11 couter : 908550
+NVMe command result:00000000
+read: Success
+317
+bit : 25 couter : 898790
+NVMe command result:00000000
+read: Success
+318
+bit : 24 couter : 1118720
+NVMe command result:00000000
+read: Success
+319
+bit : 27 couter : 1085670
+NVMe command result:00000000
+read: Success
+320
+bit : 13 couter : 1169370
+NVMe command result:00000000
+read: Success
+321
+bit : 6 couter : 1044030
+NVMe command result:00000000
+read: Success
+322
+bit : 0 couter : 1007880
+NVMe command result:00000000
+read: Success
+323
+bit : 11 couter : 1034280
+NVMe command result:00000000
+read: Success
+324
+bit : 15 couter : 1175650
+NVMe command result:00000000
+read: Success
+325
+bit : 20 couter : 1097830
+NVMe command result:00000000
+read: Success
+326
+bit : 15 couter : 1115320
+NVMe command result:00000000
+read: Success
+327
+bit : 22 couter : 910890
+NVMe command result:00000000
+read: Success
+328
+bit : 0 couter : 962090
+NVMe command result:00000000
+read: Success
+329
+bit : 17 couter : 1079350
+NVMe command result:00000000
+read: Success
+330
+bit : 30 couter : 1097760
+NVMe command result:00000000
+read: Success
+331
+bit : 23 couter : 1112310
+NVMe command result:00000000
+read: Success
+332
+bit : 11 couter : 1061960
+NVMe command result:00000000
+read: Success
+333
+bit : 19 couter : 1138660
+NVMe command result:00000000
+read: Success
+334
+bit : 7 couter : 966270
+NVMe command result:00000000
+read: Success
+335
+bit : 21 couter : 863590
+NVMe command result:00000000
+read: Success
+336
+bit : 31 couter : 904820
+NVMe command result:00000000
+read: Success
+337
+bit : 2 couter : 1016920
+NVMe command result:00000000
+read: Success
+338
+bit : 10 couter : 930880
+NVMe command result:00000000
+read: Success
+339
+bit : 20 couter : 1049300
+NVMe command result:00000000
+read: Success
+340
+bit : 8 couter : 1174890
+NVMe command result:00000000
+read: Success
+341
+bit : 29 couter : 1057490
+NVMe command result:00000000
+read: Success
+342
+bit : 26 couter : 900180
+NVMe command result:00000000
+read: Success
+343
+bit : 30 couter : 926120
+NVMe command result:00000000
+read: Success
+344
+bit : 23 couter : 965220
+NVMe command result:00000000
+read: Success
+345
+bit : 0 couter : 1118040
+NVMe command result:00000000
+read: Success
+346
+bit : 30 couter : 1136140
+NVMe command result:00000000
+read: Success
+347
+bit : 16 couter : 994210
+NVMe command result:00000000
+read: Success
+348
+bit : 9 couter : 984170
+NVMe command result:00000000
+read: Success
+349
+bit : 14 couter : 1133000
+NVMe command result:00000000
+read: Success
+350
+bit : 19 couter : 965270
+NVMe command result:00000000
+read: Success
+351
+bit : 5 couter : 1039110
+NVMe command result:00000000
+read: Success
+352
+bit : 10 couter : 1168250
+NVMe command result:00000000
+read: Success
+353
+bit : 24 couter : 944160
+NVMe command result:00000000
+read: Success
+354
+bit : 9 couter : 1172580
+NVMe command result:00000000
+read: Success
+355
+bit : 13 couter : 1016700
+NVMe command result:00000000
+read: Success
+356
+bit : 7 couter : 900520
+NVMe command result:00000000
+read: Success
+357
+bit : 11 couter : 1064630
+NVMe command result:00000000
+read: Success
+358
+bit : 4 couter : 1163360
+NVMe command result:00000000
+read: Success
+359
+bit : 20 couter : 1147310
+NVMe command result:00000000
+read: Success
+360
+bit : 6 couter : 1011390
+NVMe command result:00000000
+read: Success
+361
+bit : 25 couter : 1126990
+NVMe command result:00000000
+read: Success
+362
+bit : 26 couter : 1025130
+NVMe command result:00000000
+read: Success
+363
+bit : 11 couter : 1145820
+NVMe command result:00000000
+read: Success
+364
+bit : 0 couter : 1056710
+NVMe command result:00000000
+read: Success
+365
+bit : 23 couter : 934550
+NVMe command result:00000000
+read: Success
+366
+bit : 27 couter : 1101740
+NVMe command result:00000000
+read: Success
+367
+bit : 25 couter : 1068460
+NVMe command result:00000000
+read: Success
+368
+bit : 14 couter : 1006910
+NVMe command result:00000000
+read: Success
+369
+bit : 26 couter : 853570
+NVMe command result:00000000
+read: Success
+370
+bit : 30 couter : 1037010
+NVMe command result:00000000
+read: Success
+371
+bit : 9 couter : 989710
+NVMe command result:00000000
+read: Success
+372
+bit : 18 couter : 992850
+NVMe command result:00000000
+read: Success
+373
+bit : 27 couter : 923220
+NVMe command result:00000000
+read: Success
+374
+bit : 2 couter : 928300
+NVMe command result:00000000
+read: Success
+375
+bit : 26 couter : 880740
+NVMe command result:00000000
+read: Success
+376
+bit : 11 couter : 1124220
+NVMe command result:00000000
+read: Success
+377
+bit : 3 couter : 929710
+NVMe command result:00000000
+read: Success
+378
+bit : 3 couter : 1040290
+NVMe command result:00000000
+read: Success
+379
+bit : 19 couter : 961550
+NVMe command result:00000000
+read: Success
+380
+bit : 5 couter : 956540
+NVMe command result:00000000
+read: Success
+381
+bit : 29 couter : 1071680
+NVMe command result:00000000
+read: Success
+382
+bit : 14 couter : 1171490
+NVMe command result:00000000
+read: Success
+383
+bit : 17 couter : 1129100
+NVMe command result:00000000
+read: Success
+384
+bit : 9 couter : 936760
+NVMe command result:00000000
+read: Success
+385
+bit : 25 couter : 1052560
+NVMe command result:00000000
+read: Success
+386
+bit : 27 couter : 1166660
+NVMe command result:00000000
+read: Success
+387
+bit : 4 couter : 1087700
+NVMe command result:00000000
+read: Success
+388
+bit : 5 couter : 961350
+NVMe command result:00000000
+read: Success
+389
+bit : 24 couter : 867210
+NVMe command result:00000000
+read: Success
+390
+bit : 7 couter : 1032660
+NVMe command result:00000000
+read: Success
+391
+bit : 30 couter : 914290
+NVMe command result:00000000
+read: Success
+392
+bit : 21 couter : 896820
+NVMe command result:00000000
+read: Success
+393
+bit : 10 couter : 1048900
+NVMe command result:00000000
+read: Success
+394
+bit : 11 couter : 1029750
+NVMe command result:00000000
+read: Success
+395
+bit : 0 couter : 957520
+NVMe command result:00000000
+read: Success
+396
+bit : 12 couter : 980460
+NVMe command result:00000000
+read: Success
+397
+bit : 17 couter : 895050
+NVMe command result:00000000
+read: Success
+398
+bit : 16 couter : 1099230
+NVMe command result:00000000
+read: Success
+399
+bit : 23 couter : 866800
+NVMe command result:00000000
+read: Success
+400
+bit : 15 couter : 899850
+NVMe command result:00000000
+read: Success
+401
+bit : 25 couter : 1032220
+NVMe command result:00000000
+read: Success
+402
+bit : 7 couter : 1079310
+NVMe command result:00000000
+read: Success
+403
+bit : 24 couter : 1028000
+NVMe command result:00000000
+read: Success
+404
+bit : 30 couter : 1168480
+NVMe command result:00000000
+read: Success
+405
+bit : 18 couter : 1052580
+NVMe command result:00000000
+read: Success
+406
+bit : 3 couter : 1121580
+NVMe command result:00000000
+read: Success
+407
+bit : 17 couter : 1092500
+NVMe command result:00000000
+read: Success
+408
+bit : 1 couter : 885310
+NVMe command result:00000000
+read: Success
+409
+bit : 31 couter : 1097850
+NVMe command result:00000000
+read: Success
+410
+bit : 1 couter : 1056320
+NVMe command result:00000000
+read: Success
+411
+bit : 9 couter : 867000
+NVMe command result:00000000
+read: Success
+412
+bit : 30 couter : 972590
+NVMe command result:00000000
+read: Success
+413
+bit : 25 couter : 1082620
+NVMe command result:00000000
+read: Success
+414
+bit : 20 couter : 1043790
+NVMe command result:00000000
+read: Success
+415
+bit : 12 couter : 970650
+NVMe command result:00000000
+read: Success
+416
+bit : 10 couter : 933440
+NVMe command result:00000000
+read: Success
+417
+bit : 14 couter : 999080
+NVMe command result:00000000
+read: Success
+418
+bit : 4 couter : 962970
+NVMe command result:00000000
+read: Success
+419
+bit : 24 couter : 906010
+NVMe command result:00000000
+read: Success
+420
+bit : 2 couter : 1080750
+NVMe command result:00000000
+read: Success
+421
+bit : 16 couter : 877600
+NVMe command result:00000000
+read: Success
+422
+bit : 6 couter : 1091770
+NVMe command result:00000000
+read: Success
+423
+bit : 25 couter : 976820
+NVMe command result:00000000
+read: Success
+424
+bit : 4 couter : 1099850
+NVMe command result:00000000
+read: Success
+425
+bit : 28 couter : 1069740
+NVMe command result:00000000
+read: Success
+426
+bit : 31 couter : 1015530
+NVMe command result:00000000
+read: Success
+427
+bit : 4 couter : 990250
+NVMe command result:00000000
+read: Success
+428
+bit : 9 couter : 1028570
+NVMe command result:00000000
+read: Success
+429
+bit : 13 couter : 906740
+NVMe command result:00000000
+read: Success
+430
+bit : 21 couter : 1170250
+NVMe command result:00000000
+read: Success
+431
+bit : 21 couter : 862370
+NVMe command result:00000000
+read: Success
+432
+bit : 8 couter : 937970
+NVMe command result:00000000
+read: Success
+433
+bit : 15 couter : 1089890
+NVMe command result:00000000
+read: Success
+434
+bit : 21 couter : 1020180
+NVMe command result:00000000
+read: Success
+435
+bit : 1 couter : 1068920
+NVMe command result:00000000
+read: Success
+436
+bit : 20 couter : 901560
+NVMe command result:00000000
+read: Success
+437
+bit : 4 couter : 1135660
+NVMe command result:00000000
+read: Success
+438
+bit : 28 couter : 1130710
+NVMe command result:00000000
+read: Success
+439
+bit : 22 couter : 1050730
+NVMe command result:00000000
+read: Success
+440
+bit : 16 couter : 998800
+NVMe command result:00000000
+read: Success
+441
+bit : 3 couter : 935240
+NVMe command result:00000000
+read: Success
+442
+bit : 17 couter : 1104910
+NVMe command result:00000000
+read: Success
+443
+bit : 3 couter : 1161220
+NVMe command result:00000000
+read: Success
+444
+bit : 23 couter : 1126130
+NVMe command result:00000000
+read: Success
+445
+bit : 2 couter : 871060
+NVMe command result:00000000
+read: Success
+446
+bit : 1 couter : 934350
+NVMe command result:00000000
+read: Success
+447
+bit : 15 couter : 1030890
+NVMe command result:00000000
+read: Success
+448
+bit : 8 couter : 925550
+NVMe command result:00000000
+read: Success
+449
+bit : 26 couter : 1078900
+NVMe command result:00000000
+read: Success
+450
+bit : 5 couter : 1169580
+NVMe command result:00000000
+read: Success
+451
+bit : 3 couter : 1144520
+NVMe command result:00000000
+read: Success
+452
+bit : 12 couter : 1037210
+NVMe command result:00000000
+read: Success
+453
+bit : 27 couter : 1169080
+NVMe command result:00000000
+read: Success
+454
+bit : 22 couter : 987870
+NVMe command result:00000000
+read: Success
+455
+bit : 16 couter : 916680
+NVMe command result:00000000
+read: Success
+456
+bit : 12 couter : 962840
+NVMe command result:00000000
+read: Success
+457
+bit : 5 couter : 972250
+NVMe command result:00000000
+read: Success
+458
+bit : 23 couter : 987350
+NVMe command result:00000000
+read: Success
+459
+bit : 2 couter : 1087690
+NVMe command result:00000000
+read: Success
+460
+bit : 1 couter : 880420
+NVMe command result:00000000
+read: Success
+461
+bit : 24 couter : 939650
+NVMe command result:00000000
+read: Success
+462
+bit : 25 couter : 1079380
+NVMe command result:00000000
+read: Success
+463
+bit : 14 couter : 948560
+NVMe command result:00000000
+read: Success
+464
+bit : 22 couter : 889370
+NVMe command result:00000000
+read: Success
+465
+bit : 7 couter : 1121220
+NVMe command result:00000000
+read: Success
+466
+bit : 18 couter : 1016990
+NVMe command result:00000000
+read: Success
+467
+bit : 5 couter : 1156990
+NVMe command result:00000000
+read: Success
+468
+bit : 7 couter : 1151270
+NVMe command result:00000000
+read: Success
+469
+bit : 9 couter : 959500
+NVMe command result:00000000
+read: Success
+470
+bit : 4 couter : 1020490
+NVMe command result:00000000
+read: Success
+471
+bit : 0 couter : 935370
+NVMe command result:00000000
+read: Success
+472
+bit : 15 couter : 855950
+NVMe command result:00000000
+read: Success
+473
+bit : 27 couter : 955150
+NVMe command result:00000000
+read: Success
+474
+bit : 29 couter : 905990
+NVMe command result:00000000
+read: Success
+475
+bit : 14 couter : 874470
+NVMe command result:00000000
+read: Success
+476
+bit : 27 couter : 1083780
+NVMe command result:00000000
+read: Success
+477
+bit : 23 couter : 964860
+NVMe command result:00000000
+read: Success
+478
+bit : 16 couter : 1068570
+NVMe command result:00000000
+read: Success
+479
+bit : 31 couter : 1095660
+NVMe command result:00000000
+read: Success
+480
+bit : 2 couter : 1151000
+NVMe command result:00000000
+read: Success
+481
+bit : 9 couter : 1016690
+NVMe command result:00000000
+read: Success
+482
+bit : 12 couter : 899980
+NVMe command result:00000000
+read: Success
+483
+bit : 13 couter : 1116790
+NVMe command result:00000000
+read: Success
+484
+bit : 3 couter : 1013460
+NVMe command result:00000000
+read: Success
+485
+bit : 3 couter : 1158660
+NVMe command result:00000000
+read: Success
+486
+bit : 16 couter : 1045900
+NVMe command result:00000000
+read: Success
+487
+bit : 26 couter : 1164430
+NVMe command result:00000000
+read: Success
+488
+bit : 2 couter : 1162890
+NVMe command result:00000000
+read: Success
+489
+bit : 16 couter : 1160110
+NVMe command result:00000000
+read: Success
+490
+bit : 27 couter : 918560
+NVMe command result:00000000
+read: Success
+491
+bit : 18 couter : 1092280
+NVMe command result:00000000
+read: Success
+492
+bit : 13 couter : 1084160
+NVMe command result:00000000
+read: Success
+493
+bit : 16 couter : 969430
+NVMe command result:00000000
+read: Success
+494
+bit : 29 couter : 1118650
+NVMe command result:00000000
+read: Success
+495
+bit : 0 couter : 1168060
+NVMe command result:00000000
+read: Success
+496
+bit : 2 couter : 1170130
+NVMe command result:00000000
+read: Success
+497
+bit : 26 couter : 974160
+NVMe command result:00000000
+read: Success
+498
+bit : 10 couter : 1036250
+NVMe command result:00000000
+read: Success
+499
+bit : 21 couter : 908660
+NVMe command result:00000000
+read: Success
+500
+bit : 28 couter : 1121440
+NVMe command result:00000000
+read: Success
+501
+bit : 2 couter : 1016050
+NVMe command result:00000000
+read: Success
+502
+bit : 15 couter : 872320
+NVMe command result:00000000
+read: Success
+503
+bit : 3 couter : 908450
+NVMe command result:00000000
+read: Success
+504
+bit : 27 couter : 1117230
+NVMe command result:00000000
+read: Success
+505
+bit : 4 couter : 990410
+NVMe command result:00000000
+read: Success
+506
+bit : 3 couter : 878660
+NVMe command result:00000000
+read: Success
+507
+bit : 22 couter : 1080460
+NVMe command result:00000000
+read: Success
+508
+bit : 21 couter : 1105400
+NVMe command result:00000000
+read: Success
+509
+bit : 23 couter : 978390
+NVMe command result:00000000
+read: Success
+510
+bit : 16 couter : 1063030
+NVMe command result:00000000
+read: Success
+511
+bit : 15 couter : 957560
+NVMe command result:00000000
+read: Success
+512
+bit : 3 couter : 908030
+NVMe command result:00000000
+read: Success
+513
+bit : 6 couter : 1101600
+NVMe command result:00000000
+read: Success
+514
+bit : 28 couter : 1169280
+NVMe command result:00000000
+read: Success
+515
+bit : 27 couter : 1094370
+NVMe command result:00000000
+read: Success
+516
+bit : 12 couter : 1073890
+NVMe command result:00000000
+read: Success
+517
+bit : 2 couter : 875270
+NVMe command result:00000000
+read: Success
+518
+bit : 0 couter : 1073060
+NVMe command result:00000000
+read: Success
+519
+bit : 19 couter : 940440
+NVMe command result:00000000
+read: Success
+520
+bit : 21 couter : 1152970
+NVMe command result:00000000
+read: Success
+521
+bit : 29 couter : 880560
+NVMe command result:00000000
+read: Success
+522
+bit : 4 couter : 931240
+NVMe command result:00000000
+read: Success
+523
+bit : 27 couter : 921210
+NVMe command result:00000000
+read: Success
+524
+bit : 29 couter : 1051970
+NVMe command result:00000000
+read: Success
+525
+bit : 13 couter : 1042300
+NVMe command result:00000000
+read: Success
+526
+bit : 28 couter : 1095860
+NVMe command result:00000000
+read: Success
+527
+bit : 20 couter : 1053090
+NVMe command result:00000000
+read: Success
+528
+bit : 17 couter : 897760
+NVMe command result:00000000
+read: Success
+529
+bit : 7 couter : 1158210
+NVMe command result:00000000
+read: Success
+530
+bit : 25 couter : 1107980
+NVMe command result:00000000
+read: Success
+531
+bit : 29 couter : 987920
+NVMe command result:00000000
+read: Success
+532
+bit : 16 couter : 1098940
+NVMe command result:00000000
+read: Success
+533
+bit : 15 couter : 1078550
+NVMe command result:00000000
+read: Success
+534
+bit : 15 couter : 935240
+NVMe command result:00000000
+read: Success
+535
+bit : 3 couter : 873680
+NVMe command result:00000000
+read: Success
+536
+bit : 14 couter : 1033120
+NVMe command result:00000000
+read: Success
+537
+bit : 18 couter : 922000
+NVMe command result:00000000
+read: Success
+538
+bit : 1 couter : 950400
+NVMe command result:00000000
+read: Success
+539
+bit : 7 couter : 1018030
+NVMe command result:00000000
+read: Success
+540
+bit : 7 couter : 1138480
+NVMe command result:00000000
+read: Success
+541
+bit : 19 couter : 929950
+NVMe command result:00000000
+read: Success
+542
+bit : 13 couter : 1139270
+NVMe command result:00000000
+read: Success
+543
+bit : 1 couter : 1065550
+NVMe command result:00000000
+read: Success
+544
+bit : 13 couter : 892820
+NVMe command result:00000000
+read: Success
+545
+bit : 1 couter : 992650
+NVMe command result:00000000
+read: Success
+546
+bit : 23 couter : 1129660
+NVMe command result:00000000
+read: Success
+547
+bit : 10 couter : 859300
+NVMe command result:00000000
+read: Success
+548
+bit : 21 couter : 1027920
+NVMe command result:00000000
+read: Success
+549
+bit : 27 couter : 1121640
+NVMe command result:00000000
+read: Success
+550
+bit : 3 couter : 1029530
+NVMe command result:00000000
+read: Success
+551
+bit : 21 couter : 880350
+NVMe command result:00000000
+read: Success
+552
+bit : 24 couter : 1161280
+NVMe command result:00000000
+read: Success
+553
+bit : 11 couter : 1024250
+NVMe command result:00000000
+read: Success
+554
+bit : 17 couter : 990510
+NVMe command result:00000000
+read: Success
+555
+bit : 12 couter : 1015190
+NVMe command result:00000000
+read: Success
+556
+bit : 0 couter : 1118540
+NVMe command result:00000000
+read: Success
+557
+bit : 17 couter : 1108310
+NVMe command result:00000000
+read: Success
+558
+bit : 27 couter : 851560
+NVMe command result:00000000
+read: Success
+559
+bit : 16 couter : 1025710
+NVMe command result:00000000
+read: Success
+560
+bit : 7 couter : 1096720
+NVMe command result:00000000
+read: Success
+561
+bit : 26 couter : 1070130
+NVMe command result:00000000
+read: Success
+562
+bit : 12 couter : 975810
+NVMe command result:00000000
+read: Success
+563
+bit : 27 couter : 869670
+NVMe command result:00000000
+read: Success
+564
+bit : 0 couter : 1160630
+NVMe command result:00000000
+read: Success
+565
+bit : 26 couter : 1079900
+NVMe command result:00000000
+read: Success
+566
+bit : 23 couter : 1111880
+NVMe command result:00000000
+read: Success
+567
+bit : 16 couter : 1023420
+NVMe command result:00000000
+read: Success
+568
+bit : 27 couter : 957570
+NVMe command result:00000000
+read: Success
+569
+bit : 16 couter : 1064270
+NVMe command result:00000000
+read: Success
+570
+bit : 28 couter : 1120750
+NVMe command result:00000000
+read: Success
+571
+bit : 28 couter : 1072380
+NVMe command result:00000000
+read: Success
+572
+bit : 30 couter : 1016060
+NVMe command result:00000000
+read: Success
+573
+bit : 13 couter : 867980
+NVMe command result:00000000
+read: Success
+574
+bit : 24 couter : 1127370
+NVMe command result:00000000
+read: Success
+575
+bit : 23 couter : 923950
+NVMe command result:00000000
+read: Success
+576
+bit : 4 couter : 1176510
+NVMe command result:00000000
+read: Success
+577
+bit : 30 couter : 1140410
+NVMe command result:00000000
+read: Success
+578
+bit : 20 couter : 1119420
+NVMe command result:00000000
+read: Success
+579
+bit : 21 couter : 890080
+NVMe command result:00000000
+read: Success
+580
+bit : 29 couter : 889570
+NVMe command result:00000000
+read: Success
+581
+bit : 7 couter : 899650
+NVMe command result:00000000
+read: Success
+582
+bit : 19 couter : 888320
+NVMe command result:00000000
+read: Success
+583
+bit : 29 couter : 1052650
+NVMe command result:00000000
+read: Success
+584
+bit : 24 couter : 853470
+NVMe command result:00000000
+read: Success
+585
+bit : 21 couter : 886660
+NVMe command result:00000000
+read: Success
+586
+bit : 8 couter : 1010100
+NVMe command result:00000000
+read: Success
+587
+bit : 1 couter : 975700
+NVMe command result:00000000
+read: Success
+588
+bit : 30 couter : 1162620
+NVMe command result:00000000
+read: Success
+589
+bit : 4 couter : 1058780
+NVMe command result:00000000
+read: Success
+590
+bit : 10 couter : 1111160
+NVMe command result:00000000
+read: Success
+591
+bit : 25 couter : 895670
+NVMe command result:00000000
+read: Success
+592
+bit : 14 couter : 1149510
+NVMe command result:00000000
+read: Success
+593
+bit : 15 couter : 865600
+NVMe command result:00000000
+read: Success
+594
+bit : 13 couter : 890580
+NVMe command result:00000000
+read: Success
+595
+bit : 2 couter : 1026050
+NVMe command result:00000000
+read: Success
+596
+bit : 5 couter : 1034020
+NVMe command result:00000000
+read: Success
+597
+bit : 1 couter : 1034960
+NVMe command result:00000000
+read: Success
+598
+bit : 8 couter : 910560
+NVMe command result:00000000
+read: Success
+599
+bit : 21 couter : 952560
+NVMe command result:00000000
+read: Success
+600
+bit : 18 couter : 965890
+NVMe command result:00000000
+read: Success
+601
+bit : 2 couter : 927890
+NVMe command result:00000000
+read: Success
+602
+bit : 9 couter : 1034360
+NVMe command result:00000000
+read: Success
+603
+bit : 1 couter : 874990
+NVMe command result:00000000
+read: Success
+604
+bit : 2 couter : 1033380
+NVMe command result:00000000
+read: Success
+605
+bit : 30 couter : 1058490
+NVMe command result:00000000
+read: Success
+606
+bit : 19 couter : 1165450
+NVMe command result:00000000
+read: Success
+607
+bit : 3 couter : 1161760
+NVMe command result:00000000
+read: Success
+608
+bit : 31 couter : 942060
+NVMe command result:00000000
+read: Success
+609
+bit : 13 couter : 1030960
+NVMe command result:00000000
+read: Success
+610
+bit : 31 couter : 949530
+NVMe command result:00000000
+read: Success
+611
+bit : 26 couter : 1159160
+NVMe command result:00000000
+read: Success
+612
+bit : 22 couter : 1015160
+NVMe command result:00000000
+read: Success
+613
+bit : 1 couter : 1068000
+NVMe command result:00000000
+read: Success
+614
+bit : 14 couter : 1111120
+NVMe command result:00000000
+read: Success
+615
+bit : 6 couter : 853450
+NVMe command result:00000000
+read: Success
+616
+bit : 26 couter : 852960
+NVMe command result:00000000
+read: Success
+617
+bit : 8 couter : 1114370
+NVMe command result:00000000
+read: Success
+618
+bit : 3 couter : 1104410
+NVMe command result:00000000
+read: Success
+619
+bit : 1 couter : 1111070
+NVMe command result:00000000
+read: Success
+620
+bit : 17 couter : 1081530
+NVMe command result:00000000
+read: Success
+621
+bit : 10 couter : 860050
+NVMe command result:00000000
+read: Success
+622
+bit : 10 couter : 958380
+NVMe command result:00000000
+read: Success
+623
+bit : 19 couter : 1149570
+NVMe command result:00000000
+read: Success
+624
+bit : 3 couter : 938240
+NVMe command result:00000000
+read: Success
+625
+bit : 22 couter : 1018720
+NVMe command result:00000000
+read: Success
+626
+bit : 30 couter : 955330
+NVMe command result:00000000
+read: Success
+627
+bit : 5 couter : 877500
+NVMe command result:00000000
+read: Success
+628
+bit : 8 couter : 905010
+NVMe command result:00000000
+read: Success
+629
+bit : 5 couter : 923190
+NVMe command result:00000000
+read: Success
+630
+bit : 7 couter : 983360
+NVMe command result:00000000
+read: Success
+631
+bit : 26 couter : 899260
+NVMe command result:00000000
+read: Success
+632
+bit : 30 couter : 856760
+NVMe command result:00000000
+read: Success
+633
+bit : 3 couter : 938700
+NVMe command result:00000000
+read: Success
+634
+bit : 23 couter : 1114010
+NVMe command result:00000000
+read: Success
+635
+bit : 2 couter : 1020980
+NVMe command result:00000000
+read: Success
+636
+bit : 17 couter : 1167470
+NVMe command result:00000000
+read: Success
+637
+bit : 27 couter : 1076890
+NVMe command result:00000000
+read: Success
+638
+bit : 13 couter : 1062130
+NVMe command result:00000000
+read: Success
+639
+bit : 6 couter : 1082160
+NVMe command result:00000000
+read: Success
+640
+bit : 0 couter : 1087410
+NVMe command result:00000000
+read: Success
+641
+bit : 25 couter : 1006610
+NVMe command result:00000000
+read: Success
+642
+bit : 17 couter : 1025030
+NVMe command result:00000000
+read: Success
+643
+bit : 29 couter : 1064290
+NVMe command result:00000000
+read: Success
+644
+bit : 5 couter : 941150
+NVMe command result:00000000
+read: Success
+645
+bit : 5 couter : 964580
+NVMe command result:00000000
+read: Success
+646
+bit : 13 couter : 1122400
+NVMe command result:00000000
+read: Success
+647
+bit : 28 couter : 904340
+NVMe command result:00000000
+read: Success
+648
+bit : 6 couter : 936760
+NVMe command result:00000000
+read: Success
+649
+bit : 11 couter : 1156600
+NVMe command result:00000000
+read: Success
+650
+bit : 30 couter : 983390
+NVMe command result:00000000
+read: Success
+651
+bit : 6 couter : 869200
+NVMe command result:00000000
+read: Success
+652
+bit : 19 couter : 1148580
+NVMe command result:00000000
+read: Success
+653
+bit : 4 couter : 1122800
+NVMe command result:00000000
+read: Success
+654
+bit : 14 couter : 922040
+NVMe command result:00000000
+read: Success
+655
+bit : 20 couter : 1013320
+NVMe command result:00000000
+read: Success
+656
+bit : 28 couter : 976950
+NVMe command result:00000000
+read: Success
+657
+bit : 11 couter : 1102590
+NVMe command result:00000000
+read: Success
+658
+bit : 27 couter : 1001420
+NVMe command result:00000000
+read: Success
+659
+bit : 20 couter : 901940
+NVMe command result:00000000
+read: Success
+660
+bit : 25 couter : 1045300
+NVMe command result:00000000
+read: Success
+661
+bit : 6 couter : 924400
+NVMe command result:00000000
+read: Success
+662
+bit : 19 couter : 866000
+NVMe command result:00000000
+read: Success
+663
+bit : 31 couter : 982380
+NVMe command result:00000000
+read: Success
+664
+bit : 6 couter : 1050820
+NVMe command result:00000000
+read: Success
+665
+bit : 30 couter : 979960
+NVMe command result:00000000
+read: Success
+666
+bit : 18 couter : 1075620
+NVMe command result:00000000
+read: Success
+667
+bit : 31 couter : 1144550
+NVMe command result:00000000
+read: Success
+668
+bit : 30 couter : 1124250
+NVMe command result:00000000
+read: Success
+669
+bit : 16 couter : 1135110
+NVMe command result:00000000
+read: Success
+670
+bit : 7 couter : 1151060
+NVMe command result:00000000
+read: Success
+671
+bit : 29 couter : 1167040
+NVMe command result:00000000
+read: Success
+672
+bit : 24 couter : 973470
+NVMe command result:00000000
+read: Success
+673
+bit : 27 couter : 1064950
+NVMe command result:00000000
+read: Success
+674
+bit : 28 couter : 856210
+NVMe command result:00000000
+read: Success
+675
+bit : 10 couter : 1029290
+NVMe command result:00000000
+read: Success
+676
+bit : 6 couter : 1050610
+NVMe command result:00000000
+read: Success
+677
+bit : 3 couter : 871030
+NVMe command result:00000000
+read: Success
+678
+bit : 21 couter : 1020260
+NVMe command result:00000000
+read: Success
+679
+bit : 15 couter : 1161980
+NVMe command result:00000000
+read: Success
+680
+bit : 22 couter : 911790
+NVMe command result:00000000
+read: Success
+681
+bit : 11 couter : 893680
+NVMe command result:00000000
+read: Success
+682
+bit : 2 couter : 981630
+NVMe command result:00000000
+read: Success
+683
+bit : 24 couter : 933620
+NVMe command result:00000000
+read: Success
+684
+bit : 26 couter : 1130440
+NVMe command result:00000000
+read: Success
+685
+bit : 29 couter : 990130
+NVMe command result:00000000
+read: Success
+686
+bit : 25 couter : 949520
+NVMe command result:00000000
+read: Success
+687
+bit : 30 couter : 921460
+NVMe command result:00000000
+read: Success
+688
+bit : 14 couter : 1117470
+NVMe command result:00000000
+read: Success
+689
+bit : 24 couter : 1116470
+NVMe command result:00000000
+read: Success
+690
+bit : 11 couter : 932080
+NVMe command result:00000000
+read: Success
+691
+bit : 19 couter : 1107260
+NVMe command result:00000000
+read: Success
+692
+bit : 24 couter : 888580
+NVMe command result:00000000
+read: Success
+693
+bit : 13 couter : 868370
+NVMe command result:00000000
+read: Success
+694
+bit : 14 couter : 856180
+NVMe command result:00000000
+read: Success
+695
+bit : 24 couter : 881170
+NVMe command result:00000000
+read: Success
+696
+bit : 31 couter : 1129550
+NVMe command result:00000000
+read: Success
+697
+bit : 14 couter : 936460
+NVMe command result:00000000
+read: Success
+698
+bit : 12 couter : 1078680
+NVMe command result:00000000
+read: Success
+699
+bit : 31 couter : 964020
+NVMe command result:00000000
+read: Success
+700
+bit : 4 couter : 1034930
+NVMe command result:00000000
+read: Success
+701
+bit : 0 couter : 866730
+NVMe command result:00000000
+read: Success
+702
+bit : 15 couter : 1054340
+NVMe command result:00000000
+read: Success
+703
+bit : 4 couter : 925340
+NVMe command result:00000000
+read: Success
+704
+bit : 29 couter : 864660
+NVMe command result:00000000
+read: Success
+705
+bit : 30 couter : 889360
+NVMe command result:00000000
+read: Success
+706
+bit : 23 couter : 1055280
+NVMe command result:00000000
+read: Success
+707
+bit : 17 couter : 996850
+NVMe command result:00000000
+read: Success
+708
+bit : 9 couter : 973340
+NVMe command result:00000000
+read: Success
+709
+bit : 27 couter : 850860
+NVMe command result:00000000
+read: Success
+710
+bit : 25 couter : 1004400
+NVMe command result:00000000
+read: Success
+711
+bit : 17 couter : 1085630
+NVMe command result:00000000
+read: Success
+712
+bit : 3 couter : 978990
+NVMe command result:00000000
+read: Success
+713
+bit : 7 couter : 1056680
+NVMe command result:00000000
+read: Success
+714
+bit : 12 couter : 1172010
+NVMe command result:00000000
+read: Success
+715
+bit : 21 couter : 1142350
+NVMe command result:00000000
+read: Success
+716
+bit : 8 couter : 1117740
+NVMe command result:00000000
+read: Success
+717
+bit : 30 couter : 1113120
+NVMe command result:00000000
+read: Success
+718
+bit : 10 couter : 1013560
+NVMe command result:00000000
+read: Success
+719
+bit : 31 couter : 1116920
+NVMe command result:00000000
+read: Success
+720
+bit : 7 couter : 901950
+NVMe command result:00000000
+read: Success
+721
+bit : 24 couter : 1153390
+NVMe command result:00000000
+read: Success
+722
+bit : 19 couter : 932310
+NVMe command result:00000000
+read: Success
+723
+bit : 17 couter : 940020
+NVMe command result:00000000
+read: Success
+724
+bit : 7 couter : 1171360
+NVMe command result:00000000
+read: Success
+725
+bit : 14 couter : 1042480
+NVMe command result:00000000
+read: Success
+726
+bit : 14 couter : 1116460
+NVMe command result:00000000
+read: Success
+727
+bit : 17 couter : 956820
+NVMe command result:00000000
+read: Success
+728
+bit : 10 couter : 857250
+NVMe command result:00000000
+read: Success
+729
+bit : 21 couter : 1128820
+NVMe command result:00000000
+read: Success
+730
+bit : 8 couter : 1135610
+NVMe command result:00000000
+read: Success
+731
+bit : 5 couter : 973330
+NVMe command result:00000000
+read: Success
+732
+bit : 11 couter : 935580
+NVMe command result:00000000
+read: Success
+733
+bit : 20 couter : 1135860
+NVMe command result:00000000
+read: Success
+734
+bit : 17 couter : 1052120
+NVMe command result:00000000
+read: Success
+735
+bit : 10 couter : 988060
+NVMe command result:00000000
+read: Success
+736
+bit : 11 couter : 1047320
+NVMe command result:00000000
+read: Success
+737
+bit : 22 couter : 955570
+NVMe command result:00000000
+read: Success
+738
+bit : 3 couter : 1168420
+NVMe command result:00000000
+read: Success
+739
+bit : 17 couter : 968300
+NVMe command result:00000000
+read: Success
+740
+bit : 3 couter : 1037550
+NVMe command result:00000000
+read: Success
+741
+bit : 8 couter : 868630
+NVMe command result:00000000
+read: Success
+742
+bit : 7 couter : 979940
+NVMe command result:00000000
+read: Success
+743
+bit : 29 couter : 1035720
+NVMe command result:00000000
+read: Success
+744
+bit : 4 couter : 1164690
+NVMe command result:00000000
+read: Success
+745
+bit : 14 couter : 851440
+NVMe command result:00000000
+read: Success
+746
+bit : 21 couter : 888390
+NVMe command result:00000000
+read: Success
+747
+bit : 24 couter : 996800
+NVMe command result:00000000
+read: Success
+748
+bit : 3 couter : 949890
+NVMe command result:00000000
+read: Success
+749
+bit : 26 couter : 1153040
+NVMe command result:00000000
+read: Success
+750
+bit : 29 couter : 1119150
+NVMe command result:00000000
+read: Success
+751
+bit : 12 couter : 1126660
+NVMe command result:00000000
+read: Success
+752
+bit : 26 couter : 1090980
+NVMe command result:00000000
+read: Success
+753
+bit : 3 couter : 948490
+NVMe command result:00000000
+read: Success
+754
+bit : 9 couter : 882770
+NVMe command result:00000000
+read: Success
+755
+bit : 15 couter : 984410
+NVMe command result:00000000
+read: Success
+756
+bit : 24 couter : 903460
+NVMe command result:00000000
+read: Success
+757
+bit : 1 couter : 1028160
+NVMe command result:00000000
+read: Success
+758
+bit : 7 couter : 894630
+NVMe command result:00000000
+read: Success
+759
+bit : 1 couter : 1173280
+NVMe command result:00000000
+read: Success
+760
+bit : 1 couter : 1093390
+NVMe command result:00000000
+read: Success
+761
+bit : 24 couter : 855670
+NVMe command result:00000000
+read: Success
+762
+bit : 28 couter : 1170650
+NVMe command result:00000000
+read: Success
+763
+bit : 18 couter : 1130830
+NVMe command result:00000000
+read: Success
+764
+bit : 24 couter : 940670
+NVMe command result:00000000
+read: Success
+765
+bit : 6 couter : 887630
+NVMe command result:00000000
+read: Success
+766
+bit : 20 couter : 1018010
+NVMe command result:00000000
+read: Success
+767
+bit : 4 couter : 1070140
+NVMe command result:00000000
+read: Success
+768
+bit : 17 couter : 1027890
+NVMe command result:00000000
+read: Success
+769
+bit : 14 couter : 943730
+NVMe command result:00000000
+read: Success
+770
+bit : 16 couter : 948020
+NVMe command result:00000000
+read: Success
+771
+bit : 10 couter : 1151600
+NVMe command result:00000000
+read: Success
+772
+bit : 25 couter : 964360
+NVMe command result:00000000
+read: Success
+773
+bit : 29 couter : 918370
+NVMe command result:00000000
+read: Success
+774
+bit : 25 couter : 1088910
+NVMe command result:00000000
+read: Success
+775
+bit : 2 couter : 876250
+NVMe command result:00000000
+read: Success
+776
+bit : 8 couter : 904120
+NVMe command result:00000000
+read: Success
+777
+bit : 18 couter : 904410
+NVMe command result:00000000
+read: Success
+778
+bit : 26 couter : 1118420
+NVMe command result:00000000
+read: Success
+779
+bit : 0 couter : 889530
+NVMe command result:00000000
+read: Success
+780
+bit : 6 couter : 1016120
+NVMe command result:00000000
+read: Success
+781
+bit : 23 couter : 1131590
+NVMe command result:00000000
+read: Success
+782
+bit : 22 couter : 1160840
+NVMe command result:00000000
+read: Success
+783
+bit : 2 couter : 1022090
+NVMe command result:00000000
+read: Success
+784
+bit : 29 couter : 1141580
+NVMe command result:00000000
+read: Success
+785
+bit : 24 couter : 1134980
+NVMe command result:00000000
+read: Success
+786
+bit : 6 couter : 1040580
+NVMe command result:00000000
+read: Success
+787
+bit : 29 couter : 1113390
+NVMe command result:00000000
+read: Success
+788
+bit : 18 couter : 1099620
+NVMe command result:00000000
+read: Success
+789
+bit : 29 couter : 958910
+NVMe command result:00000000
+read: Success
+790
+bit : 26 couter : 873620
+NVMe command result:00000000
+read: Success
+791
+bit : 24 couter : 1053780
+NVMe command result:00000000
+read: Success
+792
+bit : 28 couter : 1123050
+NVMe command result:00000000
+read: Success
+793
+bit : 4 couter : 912020
+NVMe command result:00000000
+read: Success
+794
+bit : 17 couter : 1098160
+NVMe command result:00000000
+read: Success
+795
+bit : 19 couter : 920710
+NVMe command result:00000000
+read: Success
+796
+bit : 0 couter : 935210
+NVMe command result:00000000
+read: Success
+797
+bit : 30 couter : 1149850
+NVMe command result:00000000
+read: Success
+798
+bit : 12 couter : 1030290
+NVMe command result:00000000
+read: Success
+799
+bit : 13 couter : 1008640
+NVMe command result:00000000
+read: Success
+800
+bit : 16 couter : 1110540
+NVMe command result:00000000
+read: Success
+801
+bit : 7 couter : 881350
+NVMe command result:00000000
+read: Success
+802
+bit : 28 couter : 891790
+NVMe command result:00000000
+read: Success
+803
+bit : 31 couter : 906620
+NVMe command result:00000000
+read: Success
+804
+bit : 1 couter : 1113920
+NVMe command result:00000000
+read: Success
+805
+bit : 20 couter : 1031430
+NVMe command result:00000000
+read: Success
+806
+bit : 19 couter : 1067860
+NVMe command result:00000000
+read: Success
+807
+bit : 28 couter : 890340
+NVMe command result:00000000
+read: Success
+808
+bit : 21 couter : 971940
+NVMe command result:00000000
+read: Success
+809
+bit : 22 couter : 1132220
+NVMe command result:00000000
+read: Success
+810
+bit : 28 couter : 1111250
+NVMe command result:00000000
+read: Success
+811
+bit : 30 couter : 862500
+NVMe command result:00000000
+read: Success
+812
+bit : 19 couter : 1099100
+NVMe command result:00000000
+read: Success
+813
+bit : 0 couter : 891640
+NVMe command result:00000000
+read: Success
+814
+bit : 25 couter : 1109300
+NVMe command result:00000000
+read: Success
+815
+bit : 27 couter : 887340
+NVMe command result:00000000
+read: Success
+816
+bit : 28 couter : 1078440
+NVMe command result:00000000
+read: Success
+817
+bit : 31 couter : 853780
+NVMe command result:00000000
+read: Success
+818
+bit : 14 couter : 947360
+NVMe command result:00000000
+read: Success
+819
+bit : 3 couter : 860700
+NVMe command result:00000000
+read: Success
+820
+bit : 3 couter : 897010
+NVMe command result:00000000
+read: Success
+821
+bit : 7 couter : 1041810
+NVMe command result:00000000
+read: Success
+822
+bit : 3 couter : 1084610
+NVMe command result:00000000
+read: Success
+823
+bit : 10 couter : 995040
+NVMe command result:00000000
+read: Success
+824
+bit : 2 couter : 1152120
+NVMe command result:00000000
+read: Success
+825
+bit : 1 couter : 1132070
+NVMe command result:00000000
+read: Success
+826
+bit : 31 couter : 858840
+NVMe command result:00000000
+read: Success
+827
+bit : 28 couter : 1112760
+NVMe command result:00000000
+read: Success
+828
+bit : 22 couter : 973960
+NVMe command result:00000000
+read: Success
+829
+bit : 4 couter : 1021510
+NVMe command result:00000000
+read: Success
+830
+bit : 24 couter : 1054080
+NVMe command result:00000000
+read: Success
+831
+bit : 26 couter : 887200
+NVMe command result:00000000
+read: Success
+832
+bit : 28 couter : 876000
+NVMe command result:00000000
+read: Success
+833
+bit : 23 couter : 872700
+NVMe command result:00000000
+read: Success
+834
+bit : 30 couter : 958390
+NVMe command result:00000000
+read: Success
+835
+bit : 10 couter : 893970
+NVMe command result:00000000
+read: Success
+836
+bit : 16 couter : 1007810
+NVMe command result:00000000
+read: Success
+837
+bit : 21 couter : 1144020
+NVMe command result:00000000
+read: Success
+838
+bit : 15 couter : 955010
+NVMe command result:00000000
+read: Success
+839
+bit : 12 couter : 1085590
+NVMe command result:00000000
+read: Success
+840
+bit : 17 couter : 895470
+NVMe command result:00000000
+read: Success
+841
+bit : 8 couter : 882180
+NVMe command result:00000000
+read: Success
+842
+bit : 19 couter : 880190
+NVMe command result:00000000
+read: Success
+843
+bit : 11 couter : 1009450
+NVMe command result:00000000
+read: Success
+844
+bit : 6 couter : 897530
+NVMe command result:00000000
+read: Success
+845
+bit : 0 couter : 877550
+NVMe command result:00000000
+read: Success
+846
+bit : 17 couter : 1135730
+NVMe command result:00000000
+read: Success
+847
+bit : 14 couter : 1118200
+NVMe command result:00000000
+read: Success
+848
+bit : 16 couter : 981630
+NVMe command result:00000000
+read: Success
+849
+bit : 5 couter : 887330
+NVMe command result:00000000
+read: Success
+850
+bit : 1 couter : 871030
+NVMe command result:00000000
+read: Success
+851
+bit : 17 couter : 885310
+NVMe command result:00000000
+read: Success
+852
+bit : 17 couter : 854190
+NVMe command result:00000000
+read: Success
+853
+bit : 6 couter : 953730
+NVMe command result:00000000
+read: Success
+854
+bit : 14 couter : 1019220
+NVMe command result:00000000
+read: Success
+855
+bit : 10 couter : 955700
+NVMe command result:00000000
+read: Success
+856
+bit : 17 couter : 1076440
+NVMe command result:00000000
+read: Success
+857
+bit : 25 couter : 1138820
+NVMe command result:00000000
+read: Success
+858
+bit : 2 couter : 1097270
+NVMe command result:00000000
+read: Success
+859
+bit : 25 couter : 863990
+NVMe command result:00000000
+read: Success
+860
+bit : 24 couter : 1008810
+NVMe command result:00000000
+read: Success
+861
+bit : 20 couter : 932850
+NVMe command result:00000000
+read: Success
+862
+bit : 30 couter : 1149520
+NVMe command result:00000000
+read: Success
+863
+bit : 13 couter : 921530
+NVMe command result:00000000
+read: Success
+864
+bit : 16 couter : 926290
+NVMe command result:00000000
+read: Success
+865
+bit : 22 couter : 937020
+NVMe command result:00000000
+read: Success
+866
+bit : 4 couter : 940240
+NVMe command result:00000000
+read: Success
+867
+bit : 2 couter : 937990
+NVMe command result:00000000
+read: Success
+868
+bit : 19 couter : 1175400
+NVMe command result:00000000
+read: Success
+869
+bit : 27 couter : 1117260
+NVMe command result:00000000
+read: Success
+870
+bit : 20 couter : 857780
+NVMe command result:00000000
+read: Success
+871
+bit : 7 couter : 1096280
+NVMe command result:00000000
+read: Success
+872
+bit : 16 couter : 937460
+NVMe command result:00000000
+read: Success
+873
+bit : 18 couter : 1070610
+NVMe command result:00000000
+read: Success
+874
+bit : 21 couter : 894750
+NVMe command result:00000000
+read: Success
+875
+bit : 29 couter : 874690
+NVMe command result:00000000
+read: Success
+876
+bit : 6 couter : 912950
+NVMe command result:00000000
+read: Success
+877
+bit : 12 couter : 1176770
+NVMe command result:00000000
+read: Success
+878
+bit : 3 couter : 997840
+NVMe command result:00000000
+read: Success
+879
+bit : 22 couter : 1171210
+NVMe command result:00000000
+read: Success
+880
+bit : 26 couter : 992030
+NVMe command result:00000000
+read: Success
+881
+bit : 8 couter : 961470
+NVMe command result:00000000
+read: Success
+882
+bit : 28 couter : 945330
+NVMe command result:00000000
+read: Success
+883
+bit : 5 couter : 886310
+NVMe command result:00000000
+read: Success
+884
+bit : 31 couter : 1082390
+NVMe command result:00000000
+read: Success
+885
+bit : 21 couter : 1027760
+NVMe command result:00000000
+read: Success
+886
+bit : 20 couter : 858240
+NVMe command result:00000000
+read: Success
+887
+bit : 5 couter : 1003400
+NVMe command result:00000000
+read: Success
+888
+bit : 8 couter : 913360
+NVMe command result:00000000
+read: Success
+889
+bit : 29 couter : 1174090
+NVMe command result:00000000
+read: Success
+890
+bit : 10 couter : 1109640
+NVMe command result:00000000
+read: Success
+891
+bit : 24 couter : 1075610
+NVMe command result:00000000
+read: Success
+892
+bit : 13 couter : 881110
+NVMe command result:00000000
+read: Success
+893
+bit : 21 couter : 1023020
+NVMe command result:00000000
+read: Success
+894
+bit : 17 couter : 949060
+NVMe command result:00000000
+read: Success
+895
+bit : 27 couter : 873880
+NVMe command result:00000000
+read: Success
+896
+bit : 17 couter : 951350
+NVMe command result:00000000
+read: Success
+897
+bit : 25 couter : 1143520
+NVMe command result:00000000
+read: Success
+898
+bit : 27 couter : 1111410
+NVMe command result:00000000
+read: Success
+899
+bit : 7 couter : 1069420
+NVMe command result:00000000
+read: Success
+900
+bit : 24 couter : 1017480
+NVMe command result:00000000
+read: Success
+901
+bit : 0 couter : 903690
+NVMe command result:00000000
+read: Success
+902
+bit : 1 couter : 930990
+NVMe command result:00000000
+read: Success
+903
+bit : 26 couter : 1116690
+NVMe command result:00000000
+read: Success
+904
+bit : 15 couter : 931860
+NVMe command result:00000000
+read: Success
+905
+bit : 8 couter : 1147770
+NVMe command result:00000000
+read: Success
+906
+bit : 5 couter : 852870
+NVMe command result:00000000
+read: Success
+907
+bit : 10 couter : 878000
+NVMe command result:00000000
+read: Success
+908
+bit : 28 couter : 1152440
+NVMe command result:00000000
+read: Success
+909
+bit : 28 couter : 1003990
+NVMe command result:00000000
+read: Success
+910
+bit : 11 couter : 901700
+NVMe command result:00000000
+read: Success
+911
+bit : 0 couter : 1000600
+NVMe command result:00000000
+read: Success
+912
+bit : 24 couter : 1054360
+NVMe command result:00000000
+read: Success
+913
+bit : 0 couter : 863680
+NVMe command result:00000000
+read: Success
+914
+bit : 8 couter : 894210
+NVMe command result:00000000
+read: Success
+915
+bit : 12 couter : 963670
+NVMe command result:00000000
+read: Success
+916
+bit : 16 couter : 1126730
+NVMe command result:00000000
+read: Success
+917
+bit : 22 couter : 884840
+NVMe command result:00000000
+read: Success
+918
+bit : 8 couter : 997440
+NVMe command result:00000000
+read: Success
+919
+bit : 29 couter : 864500
+NVMe command result:00000000
+read: Success
+920
+bit : 0 couter : 874560
+NVMe command result:00000000
+read: Success
+921
+bit : 9 couter : 1056790
+NVMe command result:00000000
+read: Success
+922
+bit : 28 couter : 1077760
+NVMe command result:00000000
+read: Success
+923
+bit : 2 couter : 958770
+NVMe command result:00000000
+read: Success
+924
+bit : 31 couter : 946830
+NVMe command result:00000000
+read: Success
+925
+bit : 12 couter : 860660
+NVMe command result:00000000
+read: Success
+926
+bit : 16 couter : 980600
+NVMe command result:00000000
+read: Success
+927
+bit : 25 couter : 1060680
+NVMe command result:00000000
+read: Success
+928
+bit : 3 couter : 955030
+NVMe command result:00000000
+read: Success
+929
+bit : 14 couter : 928610
+NVMe command result:00000000
+read: Success
+930
+bit : 15 couter : 999500
+NVMe command result:00000000
+read: Success
+931
+bit : 28 couter : 1070060
+NVMe command result:00000000
+read: Success
+932
+bit : 11 couter : 991850
+NVMe command result:00000000
+read: Success
+933
+bit : 20 couter : 1152770
+NVMe command result:00000000
+read: Success
+934
+bit : 17 couter : 1141600
+NVMe command result:00000000
+read: Success
+935
+bit : 31 couter : 911270
+NVMe command result:00000000
+read: Success
+936
+bit : 11 couter : 963270
+NVMe command result:00000000
+read: Success
+937
+bit : 3 couter : 1164300
+NVMe command result:00000000
+read: Success
+938
+bit : 13 couter : 1009360
+NVMe command result:00000000
+read: Success
+939
+bit : 18 couter : 895370
+NVMe command result:00000000
+read: Success
+940
+bit : 3 couter : 1094780
+NVMe command result:00000000
+read: Success
+941
+bit : 7 couter : 970600
+NVMe command result:00000000
+read: Success
+942
+bit : 31 couter : 879960
+NVMe command result:00000000
+read: Success
+943
+bit : 7 couter : 1022580
+NVMe command result:00000000
+read: Success
+944
+bit : 29 couter : 1044050
+NVMe command result:00000000
+read: Success
+945
+bit : 2 couter : 966050
+NVMe command result:00000000
+read: Success
+946
+bit : 16 couter : 1115910
+NVMe command result:00000000
+read: Success
+947
+bit : 19 couter : 1146820
+NVMe command result:00000000
+read: Success
+948
+bit : 30 couter : 1068020
+NVMe command result:00000000
+read: Success
+949
+bit : 18 couter : 1155030
+NVMe command result:00000000
+read: Success
+950
+bit : 27 couter : 927810
+NVMe command result:00000000
+read: Success
+951
+bit : 21 couter : 1120300
+NVMe command result:00000000
+read: Success
+952
+bit : 12 couter : 953800
+NVMe command result:00000000
+read: Success
+953
+bit : 14 couter : 877290
+NVMe command result:00000000
+read: Success
+954
+bit : 7 couter : 893890
+NVMe command result:00000000
+read: Success
+955
+bit : 23 couter : 992030
+NVMe command result:00000000
+read: Success
+956
+bit : 23 couter : 1124440
+NVMe command result:00000000
+read: Success
+957
+bit : 31 couter : 1043240
+NVMe command result:00000000
+read: Success
+958
+bit : 11 couter : 854000
+NVMe command result:00000000
+read: Success
+959
+bit : 8 couter : 1117180
+NVMe command result:00000000
+read: Success
+960
+bit : 7 couter : 1156670
+NVMe command result:00000000
+read: Success
+961
+bit : 15 couter : 855040
+NVMe command result:00000000
+read: Success
+962
+bit : 23 couter : 886970
+NVMe command result:00000000
+read: Success
+963
+bit : 16 couter : 1162170
+NVMe command result:00000000
+read: Success
+964
+bit : 28 couter : 970950
+NVMe command result:00000000
+read: Success
+965
+bit : 6 couter : 1153620
+NVMe command result:00000000
+read: Success
+966
+bit : 17 couter : 1106360
+NVMe command result:00000000
+read: Success
+967
+bit : 0 couter : 1089960
+NVMe command result:00000000
+read: Success
+968
+bit : 0 couter : 1138650
+NVMe command result:00000000
+read: Success
+969
+bit : 9 couter : 865560
+NVMe command result:00000000
+read: Success
+970
+bit : 4 couter : 1128380
+NVMe command result:00000000
+read: Success
+971
+bit : 22 couter : 1130650
+NVMe command result:00000000
+read: Success
+972
+bit : 7 couter : 1088670
+NVMe command result:00000000
+read: Success
+973
+bit : 7 couter : 920630
+NVMe command result:00000000
+read: Success
+974
+bit : 10 couter : 1041240
+NVMe command result:00000000
+read: Success
+975
+bit : 8 couter : 1170420
+NVMe command result:00000000
+read: Success
+976
+bit : 28 couter : 1152950
+NVMe command result:00000000
+read: Success
+977
+bit : 19 couter : 902190
+NVMe command result:00000000
+read: Success
+978
+bit : 28 couter : 1115510
+NVMe command result:00000000
+read: Success
+979
+bit : 19 couter : 878060
+NVMe command result:00000000
+read: Success
+980
+bit : 5 couter : 926290
+NVMe command result:00000000
+read: Success
+981
+bit : 18 couter : 1051860
+NVMe command result:00000000
+read: Success
+982
+bit : 11 couter : 1062730
+NVMe command result:00000000
+read: Success
+983
+bit : 5 couter : 1048030
+NVMe command result:00000000
+read: Success
+984
+bit : 26 couter : 1161410
+NVMe command result:00000000
+read: Success
+985
+bit : 4 couter : 1006900
+NVMe command result:00000000
+read: Success
+986
+bit : 5 couter : 862760
+NVMe command result:00000000
+read: Success
+987
+bit : 23 couter : 932740
+NVMe command result:00000000
+read: Success
+988
+bit : 24 couter : 954900
+NVMe command result:00000000
+read: Success
+989
+bit : 29 couter : 1061310
+NVMe command result:00000000
+read: Success
+990
+bit : 1 couter : 1135280
+NVMe command result:00000000
+read: Success
+991
+bit : 5 couter : 1047110
+NVMe command result:00000000
+read: Success
+992
+bit : 13 couter : 1162620
+NVMe command result:00000000
+read: Success
+993
+bit : 22 couter : 1077260
+NVMe command result:00000000
+read: Success
+994
+bit : 30 couter : 1000600
+NVMe command result:00000000
+read: Success
+995
+bit : 9 couter : 1154090
+NVMe command result:00000000
+read: Success
+996
+bit : 30 couter : 1110450
+NVMe command result:00000000
+read: Success
+997
+bit : 2 couter : 1059180
+NVMe command result:00000000
+read: Success
+998
+bit : 30 couter : 1162370
+NVMe command result:00000000
+read: Success
+999
+bit : 4 couter : 991470
+NVMe command result:00000000
+read: Success
+1000
+bit : 9 couter : 1090590
+NVMe command result:00000000
+read: Success
+1001
+bit : 0 couter : 850020
+NVMe command result:00000000
+read: Success
+1002
+bit : 23 couter : 887340
+NVMe command result:00000000
+read: Success
+1003
+bit : 0 couter : 1119310
+NVMe command result:00000000
+read: Success
+1004
+bit : 16 couter : 1133280
+NVMe command result:00000000
+read: Success
+1005
+bit : 12 couter : 852440
+NVMe command result:00000000
+read: Success
+1006
+bit : 2 couter : 892330
+NVMe command result:00000000
+read: Success
+1007
+bit : 2 couter : 1024880
+NVMe command result:00000000
+read: Success
+1008
+bit : 5 couter : 1001090
+NVMe command result:00000000
+read: Success
+1009
+bit : 19 couter : 877200
+NVMe command result:00000000
+read: Success
+1010
+bit : 14 couter : 884060
+NVMe command result:00000000
+read: Success
+1011
+bit : 7 couter : 880060
+NVMe command result:00000000
+read: Success
+1012
+bit : 18 couter : 958470
+NVMe command result:00000000
+read: Success
+1013
+bit : 6 couter : 871620
+NVMe command result:00000000
+read: Success
+1014
+bit : 11 couter : 1111260
+NVMe command result:00000000
+read: Success
+1015
+bit : 1 couter : 860130
+NVMe command result:00000000
+read: Success
+1016
+bit : 8 couter : 1050280
+NVMe command result:00000000
+read: Success
+1017
+bit : 31 couter : 933390
+NVMe command result:00000000
+read: Success
+1018
+bit : 0 couter : 1109270
+NVMe command result:00000000
+read: Success
+1019
+bit : 14 couter : 1056150
+NVMe command result:00000000
+read: Success
+1020
+bit : 8 couter : 1138860
+NVMe command result:00000000
+read: Success
+1021
+bit : 25 couter : 1137190
+NVMe command result:00000000
+read: Success
+1022
+bit : 8 couter : 935910
+NVMe command result:00000000
+read: Success
+1023
+bit : 26 couter : 1016470
+NVMe command result:00000000
+read: Success
