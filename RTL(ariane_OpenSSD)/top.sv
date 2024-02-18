@@ -651,11 +651,11 @@ module top(
     kernel_engine_status[6] = 0;
     kernel_engine_status[7] = 0;
     
-    commanddataport.valid = 0;
+    commanddataport.valid   = 0;
     commanddataport.command = kernel_engine_arg[1];
-    commanddataport.data0 = kernel_engine_arg[2];
-    commanddataport.data1 = kernel_engine_arg[3];
-    counter               = kernel_engine_arg[4];
+    commanddataport.data0   = kernel_engine_arg[2];
+    commanddataport.data1   = kernel_engine_arg[3];
+    counter                 = kernel_engine_arg[4];
     if(kernel_command_reg_new) begin
       reg_ctrl_next.counter = counter;
       reg_ctrl_next.c_valid = 1;
@@ -793,15 +793,15 @@ module AXI_reg_intf( // AXI lite slave interface
     end
 
     if(rstn==0) begin
-      reg_ctrl_next.kregs[0] = 32'hDEADBEEF;
-      reg_ctrl_next.arready = 1;    
-      reg_ctrl_next.rvalid = 0;
-      reg_ctrl_next.awready = 1;    
-      reg_ctrl_next.wready = 1;    
-      reg_ctrl_next.waddr_received = 0;    
-      reg_ctrl_next.wdata_received = 0;    
-      reg_ctrl_next.bvalid = 0;    
-      reg_ctrl_next.kernel_command_new = 0;    
+      reg_ctrl_next.kregs[0]            = 32'hDEADBEEF;
+      reg_ctrl_next.arready             = 1;    
+      reg_ctrl_next.rvalid              = 0;
+      reg_ctrl_next.awready             = 1;    
+      reg_ctrl_next.wready              = 1;    
+      reg_ctrl_next.waddr_received      = 0;    
+      reg_ctrl_next.wdata_received      = 0;    
+      reg_ctrl_next.bvalid              = 0;    
+      reg_ctrl_next.kernel_command_new  = 0;    
     end
   end
     
