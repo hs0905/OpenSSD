@@ -616,6 +616,7 @@ module top(
   logic [7:0] kernel_command_reg;
   logic [31:0] counter;
   logic watch_dog_counter_reset;
+  logic watch_dog_counter_reset_signal;
 
   AXI_reg_intf axi_reg_intf (
   .clk(user_clk),
@@ -628,7 +629,8 @@ module top(
   .kernel_command_new     (kernel_command_reg_new),
   .kernel_engine_arg      (kernel_engine_arg),
   .kernel_engine_status   (kernel_engine_status),
-  .firmware_counter_reset (watch_dog_counter_reset)
+  .firmware_counter_reset (watch_dog_counter_reset),
+  .firmware_counter_start (watch_dog_counter_reset_signal)
   );
 
   typedef struct {
@@ -679,6 +681,7 @@ module top(
   auto_reset_timer auto_reset_timer(
     .clk(user_clk),
     .watch_dog_signal(watch_dog_counter_reset),
+    .watch_dog_counter_start_signal(watch_dog_counter_reset_signal),
     .reset_signal(io_switch)
   );
 endmodule
@@ -694,7 +697,8 @@ module AXI_reg_intf( // AXI lite slave interface
 	  output  logic	                                                kernel_command_new,
     output  logic[AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0]	kernel_engine_arg,
 
-    output logic                                                  firmware_counter_reset
+    output logic                                                  firmware_counter_reset,
+    output logic                                                  firmware_counter_start
   );
 
   typedef struct {
@@ -713,7 +717,7 @@ module AXI_reg_intf( // AXI lite slave interface
     logic [AXI_LITE_WORD_WIDTH-1:0]       read_reg_data;
     
     logic                                 firmware_signal;
-    
+    logic                                 firmware_counter_start_signal;
     logic [AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0] kregs;
   } reg_control;
 
@@ -722,8 +726,9 @@ module AXI_reg_intf( // AXI lite slave interface
   localparam REG_ADDR_IDX_LOW = 2;    // $clog2(AXI_LITE_WORD_WIDTH/8) ;//3
   localparam REG_ADDR_IDX_HI  = 7;    //REG_ADDR_IDX_LOW + $clog2(AXI_LITE_ARG_NUM); //3+5 = 8
 
-  localparam BASE_ADDR              = 32'h43C80000; // M_AXI_GP1 base address
-  localparam FIRMWARE_SIGNAL_OFFSET = 32'h14;       // New register offset address
+  localparam BASE_ADDR                      = 32'h43C80000; // M_AXI_GP1 base address
+  localparam FIRMWARE_SIGNAL_OFFSET         = 32'h14;       // New register offset address
+  localparam FIRMWARE_COUNTER_SIGNAL_OFFSET = 32'h18;       // New register offset address
 
 	always_comb begin
     reg_ctrl_next = reg_ctrl;
@@ -746,7 +751,7 @@ module AXI_reg_intf( // AXI lite slave interface
       if(AXI_LITE_output.arvalid) begin
         reg_ctrl_next.arready = 0;
         reg_ctrl_next.rvalid = 1;        
-        reg_ctrl_next.read_reg_data = kernel_engine_status[ AXI_LITE_output.araddr[REG_ADDR_IDX_HI:REG_ADDR_IDX_LOW] ];
+        reg_ctrl_next.read_reg_data = kernel_engine_status[AXI_LITE_output.araddr[REG_ADDR_IDX_HI:REG_ADDR_IDX_LOW] ];
       end
     end
 
@@ -781,9 +786,13 @@ module AXI_reg_intf( // AXI lite slave interface
 
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
       if(AXI_LITE_output.awaddr == BASE_ADDR + FIRMWARE_SIGNAL_OFFSET)begin
-        reg_ctrl_next.firmware_signal = AXI_LITE_output.wdata;
-      end else begin
-      reg_ctrl_next.kregs[reg_ctrl.write_reg_idx] = reg_ctrl.write_reg_data;
+        reg_ctrl_next.firmware_signal               = reg_ctrl.write_reg_data;
+      end 
+      else if(AXI_LITE_output.awaddr == BASE_ADDR + FIRMWARE_COUNTER_SIGNAL_OFFSET)begin
+        reg_ctrl_next.firmware_counter_start_signal = reg_ctrl.write_reg_data;
+      end 
+      else begin
+      reg_ctrl_next.kregs[reg_ctrl.write_reg_idx]   = reg_ctrl.write_reg_data;
       end
       reg_ctrl_next.bvalid = 1;    
       reg_ctrl_next.waddr_received = 0;        
@@ -791,6 +800,7 @@ module AXI_reg_intf( // AXI lite slave interface
       if(reg_ctrl.write_reg_idx == 0)
         reg_ctrl_next.kernel_command_new = 1;     
     end
+  
 
     if(reg_ctrl.kernel_command_new) begin
       reg_ctrl_next.kernel_command_new = 0;
@@ -823,35 +833,48 @@ module AXI_reg_intf( // AXI lite slave interface
   end
 
   assign firmware_counter_reset = reg_ctrl.firmware_signal;
+  assign firmware_counter_start = reg_ctrl.firmware_counter_start_signal;
 endmodule
 
-module auto_reset_timer( // 5초 동안 신호가 들어오지 않으면 리셋 신호를 발생시키는 타이머
+module auto_reset_timer(
   input   clk,
   input   watch_dog_signal,
+  input   watch_dog_counter_start_signal,
   output  reset_signal 
   );
 
-  localparam CLOCK_FREQ = 100_000_000;  // 100 MHz
-  localparam TIMEOUT_SEC = 5;           // 5 seconds
-  localparam MAX_COUNT = CLOCK_FREQ * TIMEOUT_SEC; // number of clock cycles for 5 seconds
+  localparam CLOCK_FREQ   = 100_000_000;  // 100 MHz
+  localparam TIMEOUT_SEC  = 5;           
+  localparam MAX_COUNT    = CLOCK_FREQ * TIMEOUT_SEC; 
 
-  // timer counter
-  logic [31:0] counter = 0;
-  logic reset_signal_reg = 0;
+  logic [31:0] count      = 0;
+  logic reset_signal_reg  = 0;
 
-  always_ff @(posedge clk or posedge watch_dog_signal) begin
-    if(watch_dog_signal) begin
-      counter          <= 0;
+  always_ff @(posedge clk) begin
+    if(reset_signal_reg) begin
       reset_signal_reg <= 0;
-    end else begin
-      if(counter < MAX_COUNT) begin
-        counter           <= counter + 1;
-        reset_signal_reg  <= 0;
-      end else begin
-        reset_signal_reg  <= 1;
-        counter           <= 0;
+    end else if(watch_dog_counter_start_signal) begin
+      if(!watch_dog_signal) begin
+        if(count < MAX_COUNT - 1) begin
+          count             <= count + 1;
+          reset_signal_reg  <= 0;
+        end 
+        else begin
+          count             <= 0;
+          reset_signal_reg  <= 1;            // system reset signal
+        end
       end
+      else if(watch_dog_signal) begin
+        count            <= 0;
+        reset_signal_reg <= 0;
+      end 
+    end
+    else if(!watch_dog_counter_start_signal) begin
+      count            <= 0;
+      reset_signal_reg <= 0;
     end
   end
+
   assign reset_signal = reset_signal_reg;
-  endmodule
+endmodule
+
