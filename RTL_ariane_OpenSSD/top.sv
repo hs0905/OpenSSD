@@ -615,6 +615,7 @@ module top(
   logic kernel_command_reg_new;
   logic [7:0] kernel_command_reg;
   logic [31:0] counter;
+  logic watch_dog_counter_reset;
 
   AXI_reg_intf axi_reg_intf (
   .clk(user_clk),
@@ -626,7 +627,8 @@ module top(
   .kernel_command         (kernel_command_reg),
   .kernel_command_new     (kernel_command_reg_new),
   .kernel_engine_arg      (kernel_engine_arg),
-  .kernel_engine_status   (kernel_engine_status)
+  .kernel_engine_status   (kernel_engine_status),
+  .firmware_counter_reset (watch_dog_counter_reset)
   );
 
   typedef struct {
@@ -676,7 +678,7 @@ module top(
 
   auto_reset_timer auto_reset_timer(
     .clk(user_clk),
-    .watch_dog_signal(),
+    .watch_dog_signal(watch_dog_counter_reset),
     .reset_signal(io_switch)
   );
 endmodule
@@ -690,7 +692,9 @@ module AXI_reg_intf( // AXI lite slave interface
     output  axi_lite_input                                        AXI_LITE_input,
     output  logic [7:0]	                                          kernel_command,
 	  output  logic	                                                kernel_command_new,
-    output  logic[AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0]	kernel_engine_arg
+    output  logic[AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0]	kernel_engine_arg,
+
+    output logic                                                  firmware_counter_reset
   );
 
   typedef struct {
@@ -707,15 +711,20 @@ module AXI_reg_intf( // AXI lite slave interface
     logic [$clog2(AXI_LITE_ARG_NUM)-1:0]  write_reg_idx;
     logic [AXI_LITE_WORD_WIDTH-1:0]       write_reg_data;
     logic [AXI_LITE_WORD_WIDTH-1:0]       read_reg_data;
-
-    logic[AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0] kregs;
+    
+    logic                                 firmware_signal;
+    
+    logic [AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0] kregs;
   } reg_control;
 
   reg_control reg_ctrl, reg_ctrl_next;
     
   localparam REG_ADDR_IDX_LOW = 2;    // $clog2(AXI_LITE_WORD_WIDTH/8) ;//3
   localparam REG_ADDR_IDX_HI  = 7;    //REG_ADDR_IDX_LOW + $clog2(AXI_LITE_ARG_NUM); //3+5 = 8
-    
+
+  localparam BASE_ADDR              = 32'h43C80000; // M_AXI_GP1 base address
+  localparam FIRMWARE_SIGNAL_OFFSET = 32'h14;       // New register offset address
+
 	always_comb begin
     reg_ctrl_next = reg_ctrl;
 
@@ -771,7 +780,11 @@ module AXI_reg_intf( // AXI lite slave interface
 
 
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
+      if(AXI_LITE_output.awaddr == BASE_ADDR + FIRMWARE_SIGNAL_OFFSET)begin
+        reg_ctrl_next.firmware_signal = AXI_LITE_output.wdata;
+      end else begin
       reg_ctrl_next.kregs[reg_ctrl.write_reg_idx] = reg_ctrl.write_reg_data;
+      end
       reg_ctrl_next.bvalid = 1;    
       reg_ctrl_next.waddr_received = 0;        
       reg_ctrl_next.wdata_received = 0;   
@@ -804,10 +817,12 @@ module AXI_reg_intf( // AXI lite slave interface
       reg_ctrl_next.kernel_command_new  = 0;    
     end
   end
-    
+
   always @( posedge clk ) begin
     reg_ctrl <= reg_ctrl_next;
   end
+
+  assign firmware_counter_reset = reg_ctrl.firmware_signal;
 endmodule
 
 module auto_reset_timer( // 5초 동안 신호가 들어오지 않으면 리셋 신호를 발생시키는 타이머
