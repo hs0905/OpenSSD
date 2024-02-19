@@ -196,7 +196,6 @@ CC 등록이 활성화되면 (즉, ccEn == 1), 관리 큐를 활성화하고, �
 		}
 		uint32_t firware_signal_addr = 0x43C80014;
 		uint32_t firware_signal_value = 1;
-		cpl_print("watchdog timer reset");
 		cpl_Out32(firware_signal_addr, firware_signal_value);
 	}
 }
