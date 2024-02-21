@@ -787,10 +787,10 @@ module AXI_reg_intf( // AXI lite slave interface
 
 
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
-      if(AXI_LITE_output.awaddr == BASE_ADDR + COUNTER_RESET_OFFSET)begin
-        reg_ctrl_next.counter_reset = AXI_LITE_output.wdata;
-      end else if(AXI_LITE_output.awaddr == BASE_ADDR + COUNTER_START_OFFSET)begin
-        reg_ctrl_next.counter_start = AXI_LITE_output.wdata;
+      if(reg_ctrl_next.write_reg_idx == 5)begin
+        reg_ctrl_next.counter_reset = reg_ctrl.write_reg_data;
+      end else if(reg_ctrl_next.write_reg_idx == 6)begin
+        reg_ctrl_next.counter_start = reg_ctrl.write_reg_data;
       end else begin
       reg_ctrl_next.kregs[reg_ctrl.write_reg_idx] = reg_ctrl.write_reg_data;
       end
