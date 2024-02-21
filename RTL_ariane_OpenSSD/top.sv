@@ -785,7 +785,7 @@ module AXI_reg_intf( // AXI lite slave interface
       end
     end
 
-
+  // change in the address logic
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
       if(reg_ctrl_next.write_reg_idx == 5)begin
         reg_ctrl_next.counter_reset = reg_ctrl.write_reg_data;
