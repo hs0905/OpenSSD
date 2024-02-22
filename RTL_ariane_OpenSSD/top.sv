@@ -138,8 +138,8 @@ module top(
   pcie_rx_n,
   pcie_rx_p,
   pcie_tx_n,
-  pcie_tx_p
-  //io_switch
+  pcie_tx_p,
+  io_switch_button
   );
 
   inout [14:0]DDR_addr;
@@ -266,6 +266,7 @@ module top(
   wire user_rstn;
   wire IRQ_F2P;
   logic io_switch;
+  input io_switch_button;
   wire [31:0]M_AXI_GP1_araddr;
   wire [2:0]M_AXI_GP1_arprot;
   wire M_AXI_GP1_arready;
@@ -671,7 +672,7 @@ module top(
             commanddataport.valid = 1;
         end
     end
-    reg_ctrl_next.io_switch_reg = io_switch;
+    reg_ctrl_next.io_switch_reg = io_switch | io_switch_button;
   end
 
   always @( posedge user_clk) begin
@@ -785,7 +786,8 @@ module AXI_reg_intf( // AXI lite slave interface
       end
     end
 
-  // change in the address logic
+  // change in the address 
+    reg_ctrl_next.counter_reset = 0;
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
       if(reg_ctrl_next.write_reg_idx == 5)begin
         reg_ctrl_next.counter_reset = reg_ctrl.write_reg_data;
@@ -884,6 +886,13 @@ module auto_reset_timer(
       end
     end
   end
+
+  ila_reg ila_reg(
+     .clk(clk),
+     .probe0(0),
+     .probe1({system_reset_reg,Inner_counter_start,Inner_counter_reset,reset_signal_duration}),
+     .probe2(count)
+  );
 
   assign System_reset = system_reset_reg;
 endmodule
