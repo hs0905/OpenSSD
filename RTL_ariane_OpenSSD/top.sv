@@ -672,7 +672,7 @@ module top(
             commanddataport.valid = 1;
         end
     end
-    reg_ctrl_next.io_switch_reg = io_switch | io_switch_button;
+    reg_ctrl_next.io_switch_reg = (io_switch | io_switch_button);
   end
 
   always @( posedge user_clk) begin
@@ -733,7 +733,7 @@ module AXI_reg_intf( // AXI lite slave interface
   localparam COUNTER_RESET_OFFSET  = 32'h14;       // New register offset address
   localparam COUNTER_START_OFFSET  = 32'h18;       // New register offset address
 
-	always_comb begin
+  always_comb begin
     reg_ctrl_next = reg_ctrl;
 
     AXI_LITE_input.arready  = 0;
@@ -787,7 +787,6 @@ module AXI_reg_intf( // AXI lite slave interface
     end
 
   // change in the address 
-    reg_ctrl_next.counter_reset = 0;
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
       if(reg_ctrl_next.write_reg_idx == 5)begin
         reg_ctrl_next.counter_reset = reg_ctrl.write_reg_data;
@@ -855,7 +854,7 @@ module auto_reset_timer(
 
   logic [31:0]  count;
   logic         system_reset_reg;
-  logic [15:0]   reset_signal_duration; 
+  logic [15:0]  reset_signal_duration; 
 
   always_ff @(posedge clk) begin
     if (!rstn) begin
@@ -891,7 +890,9 @@ module auto_reset_timer(
      .clk(clk),
      .probe0(0),
      .probe1({system_reset_reg,Inner_counter_start,Inner_counter_reset,reset_signal_duration}),
-     .probe2(count)
+     .probe2(count),
+     .probe3(0),
+     .probe4(0)
   );
 
   assign System_reset = system_reset_reg;
