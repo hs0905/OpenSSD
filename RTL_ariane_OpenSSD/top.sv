@@ -848,9 +848,9 @@ module auto_reset_timer(
   );
 
   localparam CLOCK_FREQ     = 50_000_000;  // 50 MHz
-  localparam TIMEOUT_SEC    = 3;           
+  localparam TIMEOUT_SEC    = 1;           
   localparam MAX_COUNT      = CLOCK_FREQ * TIMEOUT_SEC; 
-  localparam RESET_DURATION = 50000; // 리셋 신호 지속 클록 사이클 수
+  localparam RESET_DURATION = 100000; // 리셋 신호 지속 클록 사이클 수
 
   logic [31:0]  count;
   logic         system_reset_reg;
