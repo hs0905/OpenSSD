@@ -495,7 +495,7 @@ module cva6 import ariane_pkg::*; #(
     .NR_COMMIT_PORTS ( NR_COMMIT_PORTS )
   ) commit_stage_i (
     .clk_i,
-    .rst_ni( rst_ni^io_switch                        ),
+    .rst_ni                 ( rst_ni^io_switch              ),
     .halt_i                 ( halt_ctrl                     ),
     .flush_dcache_i         ( dcache_flush_ctrl_cache       ),
     .exception_o            ( ex_commit                     ),

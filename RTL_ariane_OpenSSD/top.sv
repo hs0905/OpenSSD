@@ -686,6 +686,16 @@ module top(
     .Inner_counter_start(Inner_counter_start_wire),
     .System_reset       (io_switch)
   );
+
+  ila_reg ila_reg_top(
+     .clk(user_clk),
+     .probe0({io_switch,io_switch_button,Inner_counter_reset_wire,Inner_counter_start_wire}),
+     .probe1(0),
+     .probe2(0),
+     .probe3(0),
+     .probe4(0)
+  );
+
 endmodule
 
 module AXI_reg_intf( // AXI lite slave interface
@@ -864,7 +874,8 @@ module auto_reset_timer(
     end else begin
       if (reset_signal_duration > 0) begin
         reset_signal_duration <= reset_signal_duration - 1;
-        system_reset_reg      <= 1; 
+        system_reset_reg      <= 1;
+        count                 <= 0;
       end else begin
         system_reset_reg      <= 0; // 지속 시간이 끝나면 리셋 신호 해제
       end
