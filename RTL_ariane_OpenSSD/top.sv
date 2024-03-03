@@ -682,20 +682,10 @@ module top(
   auto_reset_timer auto_reset_timer(
     .clk                (user_clk),
     .rstn               (user_rstn), // logic 추가 필요
-    .Inner_counter_reset(Inner_counter_reset_wire),
-    .Inner_counter_start(Inner_counter_start_wire),
-    .System_reset       (io_switch)
+    .I_Heartbeat_reset(Inner_counter_reset_wire),
+    .I_Heartbeat_start(Inner_counter_start_wire),
+    .O_System_reset       (io_switch)
   );
-
-  ila_reg ila_reg_top(
-     .clk(user_clk),
-     .probe0({io_switch,io_switch_button,Inner_counter_reset_wire,Inner_counter_start_wire}),
-     .probe1(0),
-     .probe2(0),
-     .probe3(0),
-     .probe4(0)
-  );
-
 endmodule
 
 module AXI_reg_intf( // AXI lite slave interface
@@ -850,11 +840,16 @@ module AXI_reg_intf( // AXI lite slave interface
 endmodule
 
 module auto_reset_timer(
-  input   clk,
-  input   rstn,
-  input   Inner_counter_reset,
-  input   Inner_counter_start,
-  output  System_reset
+  // input   clk,
+  // input   rstn,
+  // input   Inner_counter_reset,
+  // input   Inner_counter_start,
+  // output  System_reset
+  input   logic clk,
+  input   logic rstn,
+  input   logic I_Heartbeat_start,
+  input   logic I_Heartbeat_reset,
+  output  logic O_System_reset
   );
 
   localparam CLOCK_FREQ     = 50_000_000;  // 50 MHz
@@ -862,48 +857,175 @@ module auto_reset_timer(
   localparam MAX_COUNT      = CLOCK_FREQ * TIMEOUT_SEC; 
   localparam RESET_DURATION = 100000; // 리셋 신호 지속 클록 사이클 수
 
+  typedef enum logic [1:0] {
+    IDLE      = 2'b00,
+    WAIT      = 2'b01,
+    HEARTBEAT = 2'b10,
+    REVIVE    = 2'b11
+  } state_t;
+
+  state_t current_state, next_state;
+
   logic [31:0]  count;
   logic         system_reset_reg;
   logic [15:0]  reset_signal_duration; 
+  logic         system_reset_done;
+  logic         duration_assigned;
+  logic         trigger_reset_done;
+  // state updata logic
 
-  always_ff @(posedge clk) begin
+  always_ff @(posedge clk or negedge rstn) begin
     if (!rstn) begin
-      count                 <= 0;
-      system_reset_reg      <= 0;
-      reset_signal_duration <= 0;
+      current_state <= IDLE;
     end else begin
-      if (reset_signal_duration > 0) begin
-        reset_signal_duration <= reset_signal_duration - 1;
-        system_reset_reg      <= 1;
-        count                 <= 0;
-      end else begin
-        system_reset_reg      <= 0; // 지속 시간이 끝나면 리셋 신호 해제
-      end
-
-      if(Inner_counter_start) begin
-        if(!Inner_counter_reset) begin
-          if(count < MAX_COUNT - 1) begin
-            count <= count + 1;
-          end else begin
-            count <= 0;
-            reset_signal_duration <= RESET_DURATION; // 리셋 신호 지속 시간 설정
-          end
-        end else begin
-          count <= 0;
-        end 
-      end else begin
-        count <= 0;
-      end
+      current_state <= next_state;
     end
   end
 
+ // state update logic (each state transition logic)
+  always_comb begin
+    case(current_state)
+      IDLE : begin
+        if(I_Heartbeat_start && !I_Heartbeat_reset) begin
+          next_state = WAIT;
+        end else begin
+          next_state = IDLE;
+        end
+      end
+
+      WAIT : begin
+        if(I_Heartbeat_start && I_Heartbeat_reset) begin
+          next_state = HEARTBEAT;
+        end else if(I_Heartbeat_start && !I_Heartbeat_reset && (count == MAX_COUNT-1)) begin
+          next_state = REVIVE;
+        end else if(I_Heartbeat_start && !I_Heartbeat_reset && (count < MAX_COUNT-1)) begin
+          next_state = WAIT;
+        end else if(!I_Heartbeat_start) begin
+          next_state = IDLE;
+        end
+      end
+
+      HEARTBEAT : begin
+        if(I_Heartbeat_start && I_Heartbeat_reset) begin // necessary?
+          next_state = HEARTBEAT;
+      end else if(I_Heartbeat_start && !I_Heartbeat_reset) begin
+          next_state = WAIT;
+        end else begin
+          next_state = IDLE;
+        end
+      end
+
+      REVIVE : begin
+        if(!trigger_reset_done) begin
+          next_state = REVIVE;
+        end else if(trigger_reset_done) begin
+          next_state = WAIT;
+        end else if(!I_Heartbeat_start) begin
+          next_state = IDLE;
+        end
+      end
+
+      default : next_state = IDLE;
+    endcase
+  end
+
+  always_ff @(posedge clk) begin
+    if(system_reset_done) begin
+      trigger_reset_done <= 1;
+    end else begin
+      trigger_reset_done <= 0;
+    end
+  end
+
+
+ // state action logic
+  always_ff @(posedge clk or negedge rstn) begin
+    if(!rstn) begin
+    count                   <= 0;
+    system_reset_reg        <= 0;
+    reset_signal_duration   <= 0;
+    system_reset_done       <= 0;
+    duration_assigned       <= 0;
+    end else begin
+      case(current_state)
+        IDLE : begin
+          count                 <= 0;
+          system_reset_reg      <= 0;
+          reset_signal_duration <= 0;
+          system_reset_done     <= 0;
+        end
+
+        WAIT : begin
+          count                 <= count + 1;
+          system_reset_reg      <= 0;
+          reset_signal_duration <= 0;
+          system_reset_done     <= 0;
+        end
+
+        HEARTBEAT : begin
+          count                 <= 0;
+          system_reset_reg      <= 0;
+          reset_signal_duration <= 0;
+          system_reset_done     <= 0;
+        end
+
+        REVIVE : begin
+          // default action in the [REVIVE] state
+          count               <= 0;
+          system_reset_reg    <= 1;
+          if(!system_reset_done && !duration_assigned) begin
+            reset_signal_duration <= RESET_DURATION;
+            duration_assigned     <= 1;
+          end if(reset_signal_duration > 0) begin
+            reset_signal_duration   <= reset_signal_duration - 1;
+            system_reset_done       <= 0;
+          end else begin
+            system_reset_done       <= 1;
+            duration_assigned       <= 0;
+          end
+        end
+      endcase
+    end
+  end
+
+  // always_ff @(posedge clk) begin
+  //   if (!rstn) begin
+  //     count                 <= 0;
+  //     system_reset_reg      <= 0;
+  //     reset_signal_duration <= 0;
+  //   end else begin
+  //     if (reset_signal_duration > 0) begin
+  //       reset_signal_duration <= reset_signal_duration - 1;
+  //       system_reset_reg      <= 1;
+  //       count                 <= 0;
+  //     end else begin
+  //       system_reset_reg      <= 0;         //after duation timing, unset the reset signal
+  //     end
+
+  //     if(Inner_counter_start) begin
+  //       if(!Inner_counter_reset) begin
+  //         if(count < MAX_COUNT - 1) begin
+  //           count <= count + 1;
+  //         end else begin
+  //           count <= 0;
+  //           reset_signal_duration <= RESET_DURATION; // reset signal duration
+  //         end
+  //       end else begin
+  //         count <= 0;
+  //       end 
+  //     end else begin
+  //       count <= 0;
+  //     end
+  //   end
+  // end
+
   ila_reg ila_reg(
-     .clk(clk),
-     .probe0(0),
-     .probe1({system_reset_reg,Inner_counter_start,Inner_counter_reset,reset_signal_duration}),
-     .probe2(count),
-     .probe3(0),
-     .probe4(0)
+    .clk(clk),
+    .probe0({current_state, next_state, count, system_reset_reg, reset_signal_duration, system_reset_done, duration_assigned, I_Heartbeat_start, I_Heartbeat_reset}),
+    .probe1(0),
+    .probe2(0),
+    .probe3(0),
+    .probe4(0)
   );
 
   assign System_reset = system_reset_reg;
