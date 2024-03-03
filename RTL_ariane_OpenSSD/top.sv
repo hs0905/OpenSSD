@@ -871,7 +871,7 @@ module auto_reset_timer(
   logic [15:0]  reset_signal_duration; 
   logic         system_reset_done;
   logic         duration_assigned;
-  logic         trigger_reset_done;
+  //logic         trigger_reset_done;
   // state updata logic
 
   always_ff @(posedge clk or negedge rstn) begin
@@ -883,60 +883,51 @@ module auto_reset_timer(
   end
 
  // state update logic (each state transition logic)
-  always_comb begin
+  always_ff@(posedge clk) begin
     case(current_state)
       IDLE : begin
         if(I_Heartbeat_start && !I_Heartbeat_reset) begin
-          next_state = WAIT;
+          next_state <= WAIT;
         end else begin
-          next_state = IDLE;
+          next_state <= IDLE;
         end
       end
 
       WAIT : begin
         if(I_Heartbeat_start && I_Heartbeat_reset) begin
-          next_state = HEARTBEAT;
+          next_state <= HEARTBEAT;
         end else if(I_Heartbeat_start && !I_Heartbeat_reset && (count == MAX_COUNT-1)) begin
-          next_state = REVIVE;
+          next_state <= REVIVE;
         end else if(I_Heartbeat_start && !I_Heartbeat_reset && (count < MAX_COUNT-1)) begin
-          next_state = WAIT;
+          next_state <= WAIT;
         end else if(!I_Heartbeat_start) begin
-          next_state = IDLE;
+          next_state <= IDLE;
         end
       end
 
       HEARTBEAT : begin
         if(I_Heartbeat_start && I_Heartbeat_reset) begin // necessary?
-          next_state = HEARTBEAT;
+          next_state <= HEARTBEAT;
       end else if(I_Heartbeat_start && !I_Heartbeat_reset) begin
-          next_state = WAIT;
+          next_state <= WAIT;
         end else begin
-          next_state = IDLE;
+          next_state <= IDLE;
         end
       end
 
       REVIVE : begin
-        if(!trigger_reset_done) begin
-          next_state = REVIVE;
-        end else if(trigger_reset_done) begin
-          next_state = WAIT;
+        if(!system_reset_done) begin
+          next_state <= REVIVE;
+        end else if(system_reset_done) begin
+          next_state <= WAIT;
         end else if(!I_Heartbeat_start) begin
-          next_state = IDLE;
+          next_state <= IDLE;
         end
       end
 
       default : next_state = IDLE;
     endcase
   end
-
-  always_ff @(posedge clk) begin
-    if(system_reset_done) begin
-      trigger_reset_done <= 1;
-    end else begin
-      trigger_reset_done <= 0;
-    end
-  end
-
 
  // state action logic
   always_ff @(posedge clk or negedge rstn) begin
@@ -1021,8 +1012,8 @@ module auto_reset_timer(
 
   ila_reg ila_reg(
     .clk(clk),
-    .probe0({current_state, next_state, count, system_reset_reg, reset_signal_duration, system_reset_done, duration_assigned, I_Heartbeat_start, I_Heartbeat_reset}),
-    .probe1(0),
+    .probe0(0),
+    .probe1({current_state, next_state}),
     .probe2(0),
     .probe3(0),
     .probe4(0)
