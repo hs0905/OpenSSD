@@ -682,9 +682,9 @@ module top(
   auto_reset_timer auto_reset_timer(
     .clk                (user_clk),
     .rstn               (user_rstn), // logic 추가 필요
-    .I_Heartbeat_reset(Inner_counter_reset_wire),
-    .I_Heartbeat_start(Inner_counter_start_wire),
-    .O_System_reset       (io_switch)
+    .I_Heartbeat_reset  (Inner_counter_reset_wire),
+    .I_Heartbeat_start  (Inner_counter_start_wire),
+    .O_System_reset     (io_switch)
   );
 endmodule
 
@@ -795,9 +795,9 @@ module AXI_reg_intf( // AXI lite slave interface
       end else begin
       reg_ctrl_next.kregs[reg_ctrl.write_reg_idx] = reg_ctrl.write_reg_data;
       end
-      reg_ctrl_next.bvalid          = 1;    
-      reg_ctrl_next.waddr_received  = 0;        
-      reg_ctrl_next.wdata_received  = 0;   
+      reg_ctrl_next.bvalid              = 1;    
+      reg_ctrl_next.waddr_received      = 0;        
+      reg_ctrl_next.wdata_received      = 0;   
       if(reg_ctrl.write_reg_idx == 0)
         reg_ctrl_next.kernel_command_new = 1;     
     end
@@ -808,7 +808,7 @@ module AXI_reg_intf( // AXI lite slave interface
     end
 
     if(reg_ctrl.bvalid) begin
-      AXI_LITE_input.bvalid = 1;
+      AXI_LITE_input.bvalid   = 1;
       if(AXI_LITE_output.bready) begin
         reg_ctrl_next.bvalid  = 0;
         reg_ctrl_next.awready = 1;        
@@ -962,9 +962,9 @@ module auto_reset_timer(
 
         REVIVE : begin
           // default action in the [REVIVE] state
-          count               <= 0;
-          system_reset_reg    <= 1;
-          if(!system_reset_done && !duration_assigned) begin
+          count                   <= 0;
+          system_reset_reg        <= 1;
+          if(!system_reset_done && !duration_assigned) begin // 
             reset_signal_duration <= RESET_DURATION;
             duration_assigned     <= 1;
           end if(reset_signal_duration > 0) begin
@@ -1013,7 +1013,7 @@ module auto_reset_timer(
   ila_reg ila_reg(
     .clk(clk),
     .probe0(0),
-    .probe1({current_state, next_state}),
+    .probe1({count, system_reset_reg, system_reset_done, reset_signal_duration, I_Heartbeat_reset, I_Heartbeat_start, state_t'(current_state), state_t'(next_state)}),
     .probe2(0),
     .probe3(0),
     .probe4(0)
