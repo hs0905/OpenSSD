@@ -19,19 +19,20 @@ module ariane import ariane_pkg::*;
   input  logic                    clk_i,
   input  logic                    rst_ni,
   input  logic                    io_switch,
+
   // Core ID, Cluster ID and boot address are considered more or less static
-  input  logic [riscv::VLEN-1:0]  boot_addr_i,  // reset boot address
-  input  logic [riscv::XLEN-1:0]  hart_id_i,    // hart id in a multicore environment (reflected in a CSR)
+  input  logic [riscv::VLEN-1:0]  boot_addr_i,      // reset boot address(when system reset occured, cpu will execute from this address)
+  input  logic [riscv::XLEN-1:0]  hart_id_i,        // hw thread id, distincguish between different cores in a cluster
 
   // Interrupt inputs
-  input  logic [1:0]              irq_i,        // level sensitive IR lines, mip & sip (async)
-  input  logic                    ipi_i,        // inter-processor interrupts (async)
+  input  logic [1:0]              irq_i,            // interrupt request (async), 0: software, 1: timer, 2: external
+  input  logic                    ipi_i,            // inter-processor interrupts (async), in multicore systems this is used to signal interrupts between other cores
   // Timer facilities
-  input  logic                    time_irq_i,   // timer interrupt in (async)
-  input  logic                    debug_req_i,  // debug request (async)
+  input  logic                    time_irq_i,       // interrupt from timer (async)
+  input  logic                    debug_req_i,      // debug request (async), used to signal debug requests from the debug module
   
-  input  CommandDataPort          commanddataport,
-  output StatePort                stateport,
+  input  CommandDataPort          commanddataport,  // command data port
+  output StatePort                stateport,        // state port
     
   `ifdef FIRESIM_TRACE
     // firesim trace port

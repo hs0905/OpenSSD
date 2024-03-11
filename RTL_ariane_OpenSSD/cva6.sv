@@ -380,6 +380,16 @@ module cva6 import ariane_pkg::*; #(
     .*
   );
 
+ila_reg ila_reg(
+    .clk(clk),
+    .probe0(pc_id_ex),
+    .probe1(0),
+    .probe2(0),
+    .probe3(0),
+    .probe4(0)
+  );
+
+
   // ---------
   // EX
   // ---------

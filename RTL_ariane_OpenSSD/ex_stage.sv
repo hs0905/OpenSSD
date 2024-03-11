@@ -26,7 +26,7 @@ module ex_stage import ariane_pkg::*; #(
     input  logic [riscv::VLEN-1:0]                 rs1_forwarding_i,
     input  logic [riscv::VLEN-1:0]                 rs2_forwarding_i,
     input  fu_data_t                               fu_data_i,
-    input  logic [riscv::VLEN-1:0]                 pc_i,                  // PC of current instruction
+    input  logic [riscv::VLEN-1:0]                 pc_i,                  // PC(program counter) of current instruction
     input  logic                                   is_compressed_instr_i, // we need to know if this was a compressed instruction
                                                                           // in order to calculate the next PC on a mis-predict
     // Fixed latency unit(s)

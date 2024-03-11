@@ -13,22 +13,23 @@
 // Description: Branch target calculation and comparison
 
 module branch_unit (
-    input  logic                      clk_i,
-    input  logic                      rst_ni,
-    input  logic                      debug_mode_i,
-    input  ariane_pkg::fu_data_t      fu_data_i,
-    input  logic [riscv::VLEN-1:0]    pc_i,                   // PC of instruction
-    input  logic                      is_compressed_instr_i,
-    input  logic                      fu_valid_i,             // any functional unit is valid, check that there is no accidental mis-predict
-    input  logic                      branch_valid_i,
-    input  logic                      branch_comp_res_i,      // branch comparison result from ALU
-    output logic [riscv::VLEN-1:0]    branch_result_o,
+    input  logic                                clk_i,
+    input  logic                                rst_ni,
+    input  logic                                debug_mode_i,
+    input  ariane_pkg::fu_data_t                fu_data_i,
+    input  logic [riscv::VLEN-1:0]              pc_i,                   // PC of instruction
+    input  logic                                is_compressed_instr_i,
+    input  logic                                fu_valid_i,             // any functional unit is valid, check that there is no accidental mis-predict
+    input  logic                                branch_valid_i,
+    input  logic                                branch_comp_res_i,      // branch comparison result from ALU
+    output logic [riscv::VLEN-1:0]              branch_result_o,
 
-    input  ariane_pkg::branchpredict_sbe_t        branch_predict_i,       // this is the address we predicted
-    output ariane_pkg::bp_resolve_t               resolved_branch_o,      // this is the actual address we are targeting
-    output logic                      resolve_branch_o,       // to ID to clear that we resolved the branch and we can
-                                                              // accept new entries to the scoreboard
-    output ariane_pkg::exception_t    branch_exception_o      // branch exception out
+    input  ariane_pkg::branchpredict_sbe_t      branch_predict_i,       // this is the address we predicted
+    output ariane_pkg::bp_resolve_t             resolved_branch_o,      // this is the actual address we are targeting
+    output logic                                resolve_branch_o,       // to ID to clear that we resolved the branch and we can
+
+    // accept new entries to the scoreboard
+    output ariane_pkg::exception_t              branch_exception_o      // branch exception out
 );
     logic [riscv::VLEN-1:0] target_address;
     logic [riscv::VLEN-1:0] next_pc;
