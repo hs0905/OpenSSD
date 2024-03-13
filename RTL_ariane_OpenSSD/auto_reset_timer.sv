@@ -156,6 +156,8 @@ end
 
 assign O_SYSTEM_RESET = system_reset_reg;
 
+ila
+
 endmodule
 
 

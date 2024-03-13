@@ -993,6 +993,16 @@ always_ff @(posedge clk or negedge rstn) begin
   end
 end
 
+ila_reg ila_reg_inst(
+  .clk(clk),
+  .probe0(0),
+  .probe1({current_state, next_state, timer_on, path_selector_on, system_reset_reg}),
+  .probe2({I_HEARTBEAT_RESET,I_HEARTBEAT_START}),
+  .probe3(0),
+  .probe4(0)
+);
+
+
 assign O_SYSTEM_RESET = system_reset_reg;
 
 endmodule
