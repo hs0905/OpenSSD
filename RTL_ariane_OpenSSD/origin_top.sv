@@ -1,3 +1,24 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2021/08/31 22:52:26
+// Design Name: 
+// Module Name: top
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
 import RISA_PKG::*;
 `include "defines.vh"
 module top(
@@ -117,8 +138,8 @@ module top(
   pcie_rx_n,
   pcie_rx_p,
   pcie_tx_n,
-  pcie_tx_p
-  //io_switch
+  pcie_tx_p,
+  io_switch_button
   );
 
   inout [14:0]DDR_addr;
@@ -245,6 +266,7 @@ module top(
   wire user_rstn;
   wire IRQ_F2P;
   logic io_switch;
+  input io_switch_button;
   wire [31:0]M_AXI_GP1_araddr;
   wire [2:0]M_AXI_GP1_arprot;
   wire M_AXI_GP1_arready;
@@ -542,7 +564,7 @@ module top(
   assign axi_resp_i.r.user     = 0                        ;
               
   axi_lite_output AXI_LITE_output      ;    
-  axi_lite_input AXI_LITE_input        ;    
+  axi_lite_input  AXI_LITE_input        ;    
 
   assign M_AXI_GP1_arready = AXI_LITE_input.arready;
   assign M_AXI_GP1_awready = AXI_LITE_input.awready;
@@ -594,28 +616,28 @@ module top(
   logic kernel_command_reg_new;
   logic [7:0] kernel_command_reg;
   logic [31:0] counter;
-  logic watch_dog_counter_reset;
-  logic watch_dog_counter_reset_signal;
+  logic Inner_counter_reset_wire;
+  logic Inner_counter_start_wire;
 
   AXI_reg_intf axi_reg_intf (
   .clk(user_clk),
   .rstn(user_rstn),
 
-  .AXI_LITE_output  (AXI_LITE_output),
-  .AXI_LITE_input   (AXI_LITE_input),
+  .AXI_LITE_output        (AXI_LITE_output),
+  .AXI_LITE_input         (AXI_LITE_input),
 
   .kernel_command         (kernel_command_reg),
   .kernel_command_new     (kernel_command_reg_new),
   .kernel_engine_arg      (kernel_engine_arg),
   .kernel_engine_status   (kernel_engine_status),
-  .firmware_counter_reset (watch_dog_counter_reset),
-  .firmware_counter_start (watch_dog_counter_reset_signal)
+  .Inner_counter_reset    (Inner_counter_reset_wire),
+  .Inner_counter_start    (Inner_counter_start_wire)
   );
 
   typedef struct {
-    logic c_valid;
-    logic [31:0] counter;
-    logic io_switch_reg;
+    logic         c_valid;
+    logic [31:0]  counter;
+    logic         io_switch_reg;
   } reg_control;
 
   reg_control reg_ctrl, reg_ctrl_next;
@@ -650,7 +672,7 @@ module top(
             commanddataport.valid = 1;
         end
     end
-    reg_ctrl_next.io_switch_reg = io_switch;
+    reg_ctrl_next.io_switch_reg = (io_switch | io_switch_button);
   end
 
   always @( posedge user_clk) begin
@@ -658,10 +680,11 @@ module top(
   end
 
   auto_reset_timer auto_reset_timer(
-    .clk(user_clk),
-    .watch_dog_signal(watch_dog_counter_reset),
-    .watch_dog_counter_start_signal(watch_dog_counter_reset_signal),
-    .reset_signal(io_switch)
+    .clk                (user_clk),
+    .rstn               (user_rstn), // logic 추가 필요
+    .Inner_counter_reset(Inner_counter_reset_wire),
+    .Inner_counter_start(Inner_counter_start_wire),
+    .System_reset       (io_switch)
   );
 endmodule
 
@@ -676,8 +699,8 @@ module AXI_reg_intf( // AXI lite slave interface
 	  output  logic	                                                kernel_command_new,
     output  logic[AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0]	kernel_engine_arg,
 
-    output logic                                                  firmware_counter_reset,
-    output logic                                                  firmware_counter_start
+    output logic                                                  Inner_counter_reset,
+    output logic                                                  Inner_counter_start
   );
 
   typedef struct {
@@ -695,9 +718,10 @@ module AXI_reg_intf( // AXI lite slave interface
     logic [AXI_LITE_WORD_WIDTH-1:0]       write_reg_data;
     logic [AXI_LITE_WORD_WIDTH-1:0]       read_reg_data;
     
-    logic                                 firmware_signal;
-    logic                                 firmware_counter_start_signal;
     logic [AXI_LITE_ARG_NUM-1:0][AXI_LITE_WORD_WIDTH-1:0] kregs;
+
+    logic                                 counter_reset;
+    logic                                 counter_start;
   } reg_control;
 
   reg_control reg_ctrl, reg_ctrl_next;
@@ -705,11 +729,11 @@ module AXI_reg_intf( // AXI lite slave interface
   localparam REG_ADDR_IDX_LOW = 2;    // $clog2(AXI_LITE_WORD_WIDTH/8) ;//3
   localparam REG_ADDR_IDX_HI  = 7;    //REG_ADDR_IDX_LOW + $clog2(AXI_LITE_ARG_NUM); //3+5 = 8
 
-  localparam BASE_ADDR                      = 32'h43C80000; // M_AXI_GP1 base address
-  localparam FIRMWARE_SIGNAL_OFFSET         = 32'h14;       // New register offset address
-  localparam FIRMWARE_COUNTER_SIGNAL_OFFSET = 32'h18;       // New register offset address
+  localparam BASE_ADDR             = 32'h43C80000; // M_AXI_GP1 base address
+  localparam COUNTER_RESET_OFFSET  = 32'h14;       // New register offset address
+  localparam COUNTER_START_OFFSET  = 32'h18;       // New register offset address
 
-	always_comb begin
+  always_comb begin
     reg_ctrl_next = reg_ctrl;
 
     AXI_LITE_input.arready  = 0;
@@ -743,7 +767,7 @@ module AXI_reg_intf( // AXI lite slave interface
       end
     end
 
-
+  // address write channel transaction
     if(reg_ctrl.awready) begin
       AXI_LITE_input.awready = 1;
       if(AXI_LITE_output.awvalid) begin
@@ -752,7 +776,7 @@ module AXI_reg_intf( // AXI lite slave interface
         reg_ctrl_next.waddr_received = 1;        
       end
     end
-
+  // write channel transaction
     if(reg_ctrl.wready) begin
       AXI_LITE_input.wready = 1;
       if(AXI_LITE_output.wvalid) begin
@@ -762,20 +786,18 @@ module AXI_reg_intf( // AXI lite slave interface
       end
     end
 
-
+  // change in the address 
     if(reg_ctrl.waddr_received && reg_ctrl.wdata_received) begin
-      if(AXI_LITE_output.awaddr == BASE_ADDR + FIRMWARE_SIGNAL_OFFSET)begin
-        reg_ctrl_next.firmware_signal               = reg_ctrl.write_reg_data;
-      end 
-      else if(AXI_LITE_output.awaddr == BASE_ADDR + FIRMWARE_COUNTER_SIGNAL_OFFSET)begin
-        reg_ctrl_next.firmware_counter_start_signal = reg_ctrl.write_reg_data;
-      end 
-      else begin
-      reg_ctrl_next.kregs[reg_ctrl.write_reg_idx]   = reg_ctrl.write_reg_data;
+      if(reg_ctrl_next.write_reg_idx == 5)begin
+        reg_ctrl_next.counter_reset = reg_ctrl.write_reg_data;
+      end else if(reg_ctrl_next.write_reg_idx == 6)begin
+        reg_ctrl_next.counter_start = reg_ctrl.write_reg_data;
+      end else begin
+      reg_ctrl_next.kregs[reg_ctrl.write_reg_idx] = reg_ctrl.write_reg_data;
       end
-      reg_ctrl_next.bvalid = 1;    
-      reg_ctrl_next.waddr_received = 0;        
-      reg_ctrl_next.wdata_received = 0;   
+      reg_ctrl_next.bvalid          = 1;    
+      reg_ctrl_next.waddr_received  = 0;        
+      reg_ctrl_next.wdata_received  = 0;   
       if(reg_ctrl.write_reg_idx == 0)
         reg_ctrl_next.kernel_command_new = 1;     
     end
@@ -788,9 +810,9 @@ module AXI_reg_intf( // AXI lite slave interface
     if(reg_ctrl.bvalid) begin
       AXI_LITE_input.bvalid = 1;
       if(AXI_LITE_output.bready) begin
-        reg_ctrl_next.bvalid = 0;
+        reg_ctrl_next.bvalid  = 0;
         reg_ctrl_next.awready = 1;        
-        reg_ctrl_next.wready = 1;
+        reg_ctrl_next.wready  = 1;
       end    
     end
 
@@ -804,6 +826,8 @@ module AXI_reg_intf( // AXI lite slave interface
       reg_ctrl_next.wdata_received      = 0;    
       reg_ctrl_next.bvalid              = 0;    
       reg_ctrl_next.kernel_command_new  = 0;    
+      reg_ctrl_next.counter_reset       = 0;
+      reg_ctrl_next.counter_start       = 0;
     end
   end
 
@@ -811,48 +835,67 @@ module AXI_reg_intf( // AXI lite slave interface
     reg_ctrl <= reg_ctrl_next;
   end
 
-  assign firmware_counter_reset = reg_ctrl.firmware_signal;
-  assign firmware_counter_start = reg_ctrl.firmware_counter_start_signal;
+  assign Inner_counter_reset = reg_ctrl.counter_reset;
+  assign Inner_counter_start = reg_ctrl.counter_start;
 endmodule
 
 module auto_reset_timer(
   input   clk,
-  input   watch_dog_signal,
-  input   watch_dog_counter_start_signal,
-  output  reset_signal 
+  input   rstn,
+  input   Inner_counter_reset,
+  input   Inner_counter_start,
+  output  System_reset
   );
 
-  localparam CLOCK_FREQ   = 100_000_000;  // 100 MHz
-  localparam TIMEOUT_SEC  = 5;           
-  localparam MAX_COUNT    = CLOCK_FREQ * TIMEOUT_SEC; 
+  localparam CLOCK_FREQ     = 50_000_000;  // 50 MHz
+  localparam TIMEOUT_SEC    = 1;           
+  localparam MAX_COUNT      = CLOCK_FREQ * TIMEOUT_SEC; 
+  localparam RESET_DURATION = 100000; // 리셋 신호 지속 클록 사이클 수
 
-  logic [31:0] count      = 0;
-  logic reset_signal_reg  = 0;
+  logic [31:0]  count;
+  logic         system_reset_reg;
+  logic [15:0]  reset_signal_duration; 
 
   always_ff @(posedge clk) begin
-    if(reset_signal_reg) begin
-      reset_signal_reg <= 0;
-    end else if(watch_dog_counter_start_signal) begin
-      if(!watch_dog_signal) begin
-        if(count < MAX_COUNT - 1) begin
-          count             <= count + 1;
-          reset_signal_reg  <= 0;
-        end 
-        else begin
-          count             <= 0;
-          reset_signal_reg  <= 1;            // system reset signal
-        end
+    if (!rstn) begin
+      count                 <= 0;
+      system_reset_reg      <= 0;
+      reset_signal_duration <= 0;
+    end else begin
+      if (reset_signal_duration > 0) begin
+        reset_signal_duration <= reset_signal_duration - 1;
+        system_reset_reg      <= 1;
+        count                 <= 0;
+      end else begin
+        system_reset_reg      <= 0; // 지속 시간이 끝나면 리셋 신호 해제
       end
-      else if(watch_dog_signal) begin
-        count            <= 0;
-        reset_signal_reg <= 0;
-      end 
-    end
-    else if(!watch_dog_counter_start_signal) begin
-      count            <= 0;
-      reset_signal_reg <= 0;
+
+      if(Inner_counter_start) begin
+        if(!Inner_counter_reset) begin
+          if(count < MAX_COUNT - 1) begin
+            count <= count + 1;
+          end else begin
+            count <= 0;
+            reset_signal_duration <= RESET_DURATION; // 리셋 신호 지속 시간 설정
+          end
+        end else begin
+          count <= 0;
+        end 
+      end else begin
+        count <= 0;
+      end
     end
   end
 
-  assign reset_signal = reset_signal_reg;
+  ila_reg ila_reg(
+    .clk(clk),
+    .probe0({Inner_counter_start,Inner_counter_reset}),
+    .probe1({system_reset_reg,System_reset}),
+    .probe2(count),
+    .probe3(0),
+    .probe4(reset_signal_duration)
+  );
+
+  assign System_reset = system_reset_reg;
 endmodule
+

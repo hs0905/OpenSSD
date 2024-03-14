@@ -43,7 +43,10 @@ module frontend import ariane_pkg::*; #(
   // instruction output port -> to processor back-end
   output fetch_entry_t       fetch_entry_o,       // fetch entry containing all relevant data for the ID stage
   output logic               fetch_entry_valid_o, // instruction in IF is valid
-  input  logic               fetch_entry_ready_i  // ID acknowledged this instruction
+  input  logic               fetch_entry_ready_i,  // ID acknowledged this instruction
+
+  //user defined output port for program counter analysis
+  output logic [riscv::VLEN-1:0] npc_d_wire
 );
     // Instruction Cache Registers, from I$
     logic [FETCH_WIDTH-1:0] icache_data_q;
@@ -445,12 +448,14 @@ module frontend import ariane_pkg::*; #(
       end
     `endif
     // pragma translate_on
-   ila_reg ila_fronted(
-     .clk(clk_i),
-     .probe0(npc_d),
-     .probe1(fetch_entry_o.instruction),
-     .probe2(fetch_entry_o.address),
-     .probe3(fetch_entry_valid_o),
-     .probe4(0)
-   );
+  //  ila_reg ila_fronted(
+  //    .clk(clk_i),
+  //    .probe0(npc_d),
+  //    .probe1(fetch_entry_o.instruction),
+  //    .probe2(fetch_entry_o.address),
+  //    .probe3(fetch_entry_valid_o),
+  //    .probe4(0)
+  //  );
+
+   assign npc_d_wire = npc_d;
 endmodule
